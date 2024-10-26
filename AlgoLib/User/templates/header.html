@@ -1,7 +1,7 @@
 <header>
     <div class="site-title">AlgoLibrary</div>
-    <a class="header-cell" href="#">Головна</a>
-    <a class="header-cell" href="#">Про нас</a>
-    <a class="header-cell" href="#">Послуги</a>
-    <a class="header-cell" href="#">Контакти</a>
+    <a class="header-cell" href="{% url 'user_main' %}">Головна</a>
+    <a class="header-cell" href="{% url 'user_user' %}">Користувач</a>
+    <a class="header-cell" href="{% url 'user_login' %}">Війти</a>
+    <a class="header-cell" href="{% url 'user_register' %}">Реєстрація</a>
 </header>

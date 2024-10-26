@@ -1,6 +1,12 @@
+a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
 /* Стиль для body без відступів */
 body {
     margin: 0; /* Встановлення margin в 0 */
+    font-family: "Times New Roman", Times, serif;
 }
 
 
