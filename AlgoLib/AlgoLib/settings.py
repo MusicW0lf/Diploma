@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'AlgoLib.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'BiFurryUwU', 
+        'HOST': 'database-1.c5wkmk0a67gw.eu-north-1.rds.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
