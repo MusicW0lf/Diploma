@@ -8,23 +8,21 @@
     <title>User Profile</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    
+
 </head>
 <body>
-
-<div class="header-empty"></div>
     {% include 'header.html' %}
 
 <div class="d-flex">
-    <!-- Sidebar Navigation -->
-    <nav id="sideNav" class="bg-light">
-        <a href="#overview" class="nav-cell">Огляд</a>
-        <a href="#courses" class="nav-cell">Мої курси</a>
-        <a href="#progress" class="nav-cell">Прогрес</a>
-        <a href="#settings" class="nav-cell">Налаштування</a>
+    <div class="toggle-nav" id="toggleNav"></div>
+    <nav id="sideNav">
+        <a class="nav-cell" href="#overview">Огляд</a>
+        <a class="nav-cell" href="#courses">Мої курси</a>
+        <a class="nav-cell" href="#progress">Прогрес</a>
+        <a class="nav-cell" href="#settings">Налаштування</a>
     </nav>
-
     <!-- Main Content -->
     <main id="mainContent" class="p-3 flex-grow-1">
         <!-- Profile Overview Section -->
@@ -62,6 +60,9 @@
         </section>
     </main>
 </div>
+
+<!-- Підключення руху nav -->
+<script src="{% static 'js/nav-movement.js' %}"></script>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>

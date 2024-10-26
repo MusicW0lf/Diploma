@@ -15,59 +15,6 @@ body {
     width: 100%;
     display: flex;
 }
-
-
-/* Стиль для назви сайту */
-.site-title {
-    color: white; /* Колір тексту */
-    font-size: 1.5rem; /* Розмір шрифту */
-    margin-right: auto; /* Вирівнюємо вліво */
-    padding-left: 20px; /* Відступ зліва */
-}
-
-/* Стиль для навігаційної панелі зліва */
-nav {
-    width: 200px; /* Ширина навігаційної панелі */
-    height: calc(100vh - 2.5cm); /* Висота на всю сторінку, крім висоти хедера */
-    position: fixed;
-    top: 2.5cm; /* Розташування під хедером */
-    background-color: #e0e7ff; /* Темніший фон для повного навігаційного меню */
-    padding-top: 20px;
-    padding-left: 0.5cm;
-    transform: translateX(-100%); /* Спочатку приховано зліва */
-    transition: transform 0.3s ease; /* Додаємо перехід для transform */
-    z-index: 1000;
-}
-
-/* Стиль для навігаційних комірок в nav */
-.nav-cell {
-    height: 40px; /* Висота комірки */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black; /* Колір тексту */
-    text-decoration: none; /* Прибирає підкреслення */
-    transition: background-color 0.3s; /* Додаємо перехід */
-}
-
-/* Ефект наведеня для nav-cell */
-.nav-cell:hover {
-    background-color: #cfd8dc; /* Темніший відтінок */
-}
-
-/* Стиль для основного контенту */
-main {
-    transition: margin-left 0.3s; /* Додаємо перехід для зміни margin */
-    padding: 20px;
-    margin-left: 0.5cm; /* Відступ для кнопки-стрічки */
-}
-
-/* Стиль для контейнерів */
-.content-container {
-    padding: 20px;
-    border-bottom: 1px solid #ccc; /* Лінія між контейнерами */
-}
-
 /* Стиль для кнопки-стрічки */
 .toggle-nav {
     position: fixed;
@@ -84,6 +31,29 @@ main {
 .active-nav {
     transform: translateX(0); /* Відображаємо навігацію */
 }
+
+/* Стиль для назви сайту */
+.site-title {
+    color: white; /* Колір тексту */
+    font-size: 1.5rem; /* Розмір шрифту */
+    margin-right: auto; /* Вирівнюємо вліво */
+    padding-left: 20px; /* Відступ зліва */
+}
+
+/* Стиль для основного контенту */
+main {
+    transition: margin-left 0.3s; /* Додаємо перехід для зміни margin */
+    padding: 20px;
+    margin-left: 0.5cm; /* Відступ для кнопки-стрічки */
+}
+
+/* Стиль для контейнерів */
+.content-container {
+    padding: 20px;
+    border-bottom: 1px solid #ccc; /* Лінія між контейнерами */
+}
+
+
 
 /* Стиль для контейнера з кодом */
 .code-container {
