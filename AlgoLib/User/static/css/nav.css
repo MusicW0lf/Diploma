@@ -1,0 +1,29 @@
+/* Стиль для навігаційної панелі зліва */
+nav {
+    width: 200px; /* Ширина навігаційної панелі */
+    height: calc(100vh - 2.5cm); /* Висота на всю сторінку, крім висоти хедера */
+    position: fixed;
+    top: 2.5cm; /* Розташування під хедером */
+    background-color: #e0e7ff; /* Темніший фон для повного навігаційного меню */
+    padding-top: 20px;
+    padding-left: 0.5cm;
+    transform: translateX(-100%); /* Спочатку приховано зліва */
+    transition: transform 0.3s ease; /* Додаємо перехід для transform */
+    z-index: 1000;
+}
+
+/* Стиль для навігаційних комірок в nav */
+.nav-cell {
+    height: 40px; /* Висота комірки */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black; /* Колір тексту */
+    text-decoration: none; /* Прибирає підкреслення */
+    transition: background-color 0.3s; /* Додаємо перехід */
+}
+
+/* Ефект наведеня для nav-cell */
+.nav-cell:hover {
+    background-color: #cfd8dc; /* Темніший відтінок */
+}

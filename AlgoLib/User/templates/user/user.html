@@ -1,12 +1,70 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Назва вашої сторінки</title>
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+    <title>User Profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
 </head>
 <body>
-    <h2>Yo! This is <b>User</b> page.</h2>
+    {% include 'header.html' %}
+
+<div class="d-flex">
+    <div class="toggle-nav" id="toggleNav"></div>
+    <nav id="sideNav">
+        <a class="nav-cell" href="#overview">Огляд</a>
+        <a class="nav-cell" href="#courses">Мої курси</a>
+        <a class="nav-cell" href="#progress">Прогрес</a>
+        <a class="nav-cell" href="#settings">Налаштування</a>
+    </nav>
+    <!-- Main Content -->
+    <main id="mainContent" class="p-3 flex-grow-1">
+        <!-- Profile Overview Section -->
+        <section id="overview" class="content-container mb-4">
+            <h2 class="mb-3">Привіт, Username!</h2>
+            <p>Рівень: <strong>Початківець</strong></p>
+            <p>Завершено курсів: <strong>3</strong></p>
+            <p>Середній бал: <strong>85%</strong></p>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="content-container mb-4">
+            <h3 class="mb-3">Мої курси</h3>
+            <ul class="list-group">
+                <li class="list-group-item">Курс 1: Python для початківців</li>
+                <li class="list-group-item">Курс 2: Основи веб-розробки</li>
+                <li class="list-group-item">Курс 3: Алгоритми і структури даних</li>
+            </ul>
+        </section>
+
+        <!-- Progress Section -->
+        <section id="progress" class="content-container mb-4">
+            <h3 class="mb-3">Ваш прогрес</h3>
+            <div class="progress mb-2">
+                <div class="progress-bar" role="progressbar" style="width: 75%;">75% Завершено</div>
+            </div>
+            <p>Залишилося тем: <strong>4</strong></p>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings" class="content-container">
+            <h3 class="mb-3">Налаштування профілю</h3>
+            <button class="btn btn-primary">Змінити пароль</button>
+            <button class="btn btn-danger">Видалити акаунт</button>
+        </section>
+    </main>
+</div>
+
+<!-- Підключення руху nav -->
+<script src="{% static 'js/nav-movement.js' %}"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
