@@ -6,63 +6,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlgoLib</title>
+
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="icon" href="{% static 'image/favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
-    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    
 </head>
+
+<style>
+    a:hover {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    body {
+        margin: 0;
+        font-family: "Times New Roman", Times, serif;
+        background-color: #1e1e1e;
+        color: #ffffff;
+    }
+    .header-empty {
+        height: 2.5cm;
+        width: 100%;
+        top: 0;
+        display: flex;
+    }
+    
+</style>
+
 <body>
     {% include 'header.html' %}
-    {% include 'nav.html' %}
-
-    <!-- Основний контент -->
-    <main id="mainContent">
-        <div class="content-container">
-            <h2>Розділ 1</h2>
-            <p>Python — це потужна та проста у використанні мова програмування, яка підходить для початківців. Ось кілька основних моментів для новачків:</p>
-            <div class="code-container">
-                <pre class="code">
-# Простий приклад програми на Python
-print("Привіт, світ!")
-                </pre>
-            </div>
-        </div>
-        <div class="content-container">
-            <h2>Розділ 2</h2>
-            <p>У Python можна легко працювати зі списками. Ось приклад, як додати елементи до списку та вивести їх на екран:</p>
-            <div class="code-container">
-                <pre class="code">
-# Приклад роботи зі списками
-my_list = [1, 2, 3]
-my_list.append(4)  # Додаємо 4 до списку
-print(my_list)     # Виведе: [1, 2, 3, 4]
-                </pre>
-            </div>
-        </div>
-        <div class="content-container">
-            <h2>Розділ 3</h2>
-            <p>Python також підтримує створення класів. Ось простий приклад класу та об'єкта:</p>
-            <div class="code-container">
-                <pre class="code">
-# Приклад об'єктно-орієнтованого програмування
-class Dog:
-    def __init__(self, name):
-        self.name = name
     
-    def bark(self):
-        return f"{self.name} каже гав!"
+    <main>
 
-my_dog = Dog("Рекс")
-print(my_dog.bark())  # Виведе: Рекс каже гав!
-                </pre>
-            </div>
-        </div>
+            <h1>A</h1>
+            <h1>A</h1>
+            <h1>A</h1>
+            <h1>A</h1>
+            <h1>A</h1>
+            <h1>A</h1>
+            <h1>A</h1>
+            <h1>A</h1>
+            <h1>A</h1>
+            <h1>A</h1>
+            <h1>A</h1>
+            <h1>A</h1>
+            <h1>A</h1>
+            <h1>A</h1>
 
     </main>
 
-    <!-- Підключення руху nav -->
-    <script src="{% static 'js/nav-movement.js' %}"></script>
-    <!-- Підключення JavaScript Bootstrap -->
+    {% include 'footer.html' %}
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

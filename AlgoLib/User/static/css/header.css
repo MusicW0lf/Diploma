@@ -1,26 +1,31 @@
 header {
     height: 2.5cm;
     width: 100%;
-    background-color: #007bff; /* Колір фону */
+    background-color: #1e1e1e;
     display: flex;
-    position: fixed; /* Закріплений на екрані */
+    position: fixed;
     align-items: center;
-    justify-content: space-around; /* Вирівнюємо контейнер на всю ширину */
-    top: 0; /* Залишаємо його на верхній частині екрану */
-    z-index: 2; /* Підвищений індекс, щоб перекривати інші елементи */
+    justify-content: space-around;
+    top: 0;
+    z-index: 2;
 }
-/* Стиль для навігаційних комірок в header */
+
+.logo-box {
+    height: 2cm;
+    width: 10%;
+}
+
 .header-cell {
-    width: 100px; /* Ширина комірки */
-    height: 40px; /* Висота комірки */
+    width: 100px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    text-decoration: none; /* Прибирає підкреслення */
-    transition: background-color 0.3s; /* Додаємо перехід */
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
-/* Ефект наведеня для header-cell */
+
 .header-cell:hover {
-    background-color: #0056b3; /* Темніший відтінок */
+    background-color: #0056b3;
 }
