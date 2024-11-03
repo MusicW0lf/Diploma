@@ -1,8 +1,82 @@
 footer {
-    height: 5cm;
     width: 100%;
-    position: static;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
     bottom: 0;
     z-index: 2;
-    background-color: #1e1e1e;
 }
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-icons {
+    margin-bottom: 15px;
+}
+.footer-icons i {
+    font-size: 24px;
+    color: #ffffff;
+    margin: 0 10px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+.footer-links a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-text {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+.scroll-top {
+    background: none;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 80px;
+    bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+.scroll-top:hover {
+    background: #ffffff;
+    color: #1e1e1e;
+}
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
