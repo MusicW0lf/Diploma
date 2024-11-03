@@ -2,7 +2,6 @@ footer {
     width: 100%;
     background-color: #1e1e1e;
     color: #ffffff;
-    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -13,7 +12,8 @@ footer {
 
 .footer-container {
     width: 90%;
-    max-width: 1200px;
+    margin: 10px;
+    margin-top: 30px;
     text-align: left;
     display: flex;
     flex-direction: column;

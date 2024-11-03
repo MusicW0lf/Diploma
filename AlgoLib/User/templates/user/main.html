@@ -11,9 +11,10 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="icon" href="{% static 'image/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/footer.css' %}">    
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
     
 </style>
 
@@ -21,21 +22,46 @@
     {% include 'header.html' %}
     
     <main>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
+        <div class="content-section">
+            <div class="text-content">
+                <h1>Unlock the Power of Algorithms</h1>
+                <p>Explore a comprehensive library of programming algorithms designed for every skill level</p>
+            </div>
+        </div>
+
+        <div class="algorithms-section">
+            <div class="algorithm-card card1">
+                <h2>Neural Network</h2>
+                <p>A Neural Network is a type of machine learning model designed to mimic the way the human brain processes information. It consists of layers of interconnected neurons that work together to recognize patterns in data. Neural networks are used in a variety of applications, such as image recognition and natural language processing, due to their ability to learn and improve over time.</p>
+            </div>
+            <div class="algorithm-card card2">
+                <p>Generative AI refers to artificial intelligence systems that can create new content, such as text, images, audio, or code, based on patterns learned from existing data. These models, like GPT and DALL·E, use deep learning techniques to generate outputs that resemble human-created content. Generative AI has applications in creative industries, software development, and automated content generation.</p>
+                <h2>Gen AI</h2>
+            </div>
+            <div class="algorithm-card card3">
+                <h2>CV</h2>
+                <p>Computer Vision is an algorithmic approach in programming that enables computers to process and analyze visual data from images and videos. It involves techniques for image recognition, object detection, and image segmentation, allowing machines to interpret and make decisions based on visual information.</p>
+            </div>
+            <div class="algorithm-card card4">
+                <p>Cryptography is the practice of securing information by converting it into a coded format. In programming, it involves using algorithms to encrypt (scramble) and decrypt (unscramble) data, making it accessible only to authorized users. Cryptography is essential for protecting online transactions, personal data, and secure communications.</p>
+                <h2>Cryptography</h2>
+            </div>
+            <div class="algorithm-card card5">
+                <h2>Theory of Games</h2>
+                <p>Theory of Games is a mathematical framework for analyzing situations where multiple players make decisions that affect each other. In programming, it involves using algorithms to find optimal strategies in competitive scenarios, such as in economics, politics, and computer science. This theory helps in understanding and predicting the behavior of rational agents in various situations.</p>
+            </div>
+        </div>
+        
+        <div class="laboratory-section">
+            <h2>AlgoLib Laboratory</h2>
+            <p>Ability to program directly from the site without installation</p>
+            <div class="video-container">
+                <!-- Placeholder for video content -->
+                <p>Video content goes here</p>
+            </div>
+        </div>
     </main>
+    
 
     {% include 'footer.html' %}
 
