@@ -1,8 +1,21 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/header.css' %}">
 <div class="header-empty"></div class="header-empty">
 <header>
-    <div class="site-title">AlgoLibrary</div>
-    <a class="header-cell" href="{% url 'user_main' %}">Головна</a>
-    <a class="header-cell" href="{% url 'user_user' %}">Користувач</a>
-    <a class="header-cell" href="{% url 'user_login' %}">Війти</a>
-    <a class="header-cell" href="{% url 'user_register' %}">Реєстрація</a>
+    <a class="header-cell" href="{% url 'user_main' %}">Algolibrary</a>
+    <a class="header-cell" href="{% url 'user_theme' %}">Themes</a>
+
+    <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+
+    <a class="header-cell"><i class="fa-solid fa-palette"></i></a>
+    <a class="header-cell"><i class="fa-solid fa-globe"></i></a>
+
+    <a class="header-cell" href="{% url 'user_subscription' %}"><i class="fa-solid fa-feather"></i>Subscription</a>
+    <a class="header-cell" href="{% url 'user_courses' %}"><i class="fa-brands fa-leanpub"></i>Courses</a>
+    <a class="header-cell" href="{% url 'user_laboratory' %}"><i class="fa-solid fa-flask"></i>Laboratory</a>
+    <a class="header-cell" href="{% url 'user_login' %}">Login</a>
+    <a class="header-cell" href="{% url 'user_register' %}">Sign up</a>
 </header>

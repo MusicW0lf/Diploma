@@ -1,3 +1,10 @@
+.header-empty {
+    height: 2.5cm;
+    width: 100%;
+    top: 0;
+    display: flex;
+}
+
 header {
     height: 2.5cm;
     width: 100%;
@@ -8,11 +15,6 @@ header {
     justify-content: space-around;
     top: 0;
     z-index: 2;
-}
-
-.logo-box {
-    height: 2cm;
-    width: 10%;
 }
 
 .header-cell {
