@@ -29,5 +29,86 @@ header {
 }
 
 .header-cell:hover {
-    background-color: #0056b3;
+    background-color: #333;
+}
+
+
+
+
+
+
+.search-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    border-radius: 25px; /* Rounded corners */
+    background-color: #f1f1f1; /* Light background color */
+    padding: 5px; /* Padding for spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+
+.search-container .form-control {
+    border: none; /* Remove default border */
+    outline: none; /* Remove outline */
+    background: transparent; /* Transparent background */
+    border-radius: 25px; /* Match the container's border radius */
+    padding: 10px; /* Padding for the input field */
+    width: 100%; /* Full width */
+}
+
+.search-container .search-button {
+    background: transparent; /* Transparent background */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.search-container .search-button i {
+    color: #4CAF50; /* Color for the search icon */
+    font-size: 1.2em; /* Adjust icon size */
+}
+
+
+
+
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.header-button {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #1e1e1e;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header-button:hover {
+    background-color: #333;
+}
+
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: #1e1e1e;
+    min-width: 100px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
 }

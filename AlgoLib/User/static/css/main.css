@@ -1,130 +1,107 @@
-/* Основні стилі для main */
 main {
-    padding: 20px; /* Optional: add some padding to the main section */
+    padding: 20px;
 }
 
-/* Стиль для секції контенту */
 .content-section {
-    display: flex; /* Flexbox for layout */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Space between text and image */
-    height: 450px; /* Set height to 450px */
-    width: 100%; /* Full width */
-    background-color: transparent; /* Keep the body's background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Стилі для текстового контенту */
 .text-content {
-    text-align: center; /* Center text horizontally */
-    color: #ffffff; /* White text color */
+    text-align: center;
+    color: #ffffff;
 }
 
-/* Заголовок */
 .text-content h1 {
-    margin: 0; /* Remove default margin */
-    font-size: 2.5em; /* Adjust font size */
+    margin: 0;
+    font-size: 2.5em;
 }
 
-/* Підзаголовок */
 .text-content p {
-    margin-top: 10px; /* Space between heading and paragraph */
-    font-size: 1.2em; /* Adjust font size */
+    margin-top: 10px;
+    font-size: 1.2em;
 }
 
-
-
-
-
-/* Секція з алгоритмами */
 .algorithms-section {
-    width: 100%; /* Full width */
+    width: 100%;
 }
 
-/* Стилі для карток алгоритмів */
 .algorithm-card {
-    display: flex; /* Flexbox for layout */
-    flex-direction: row; /* Stack header and description horizontally */
-    align-items: center; /* Center items vertically */
-    justify-content: space-between; /* Space between header and description */
-    height: 300px; /* Set height to 300px */
-    width: 100%; /* Full width */
-    margin-bottom: 20px; /* Space between cards */
-    border-radius: 5px; /* Rounded corners */
-    color: #000000; /* Black text color */
-    text-align: center; /* Left align text within each card */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: #000000;
+    text-align: center;
 }
 
-/* Background color gradient for each card */
 .card1 {
-    background-color: #A8E6CF; /* Light teal */
+    background-color: #A8E6CF;
 }
 
 .card2 {
-    background-color: #B9E4D6; /* Intermediate color */
+    background-color: #B9E4D6;
 }
 
 .card3 {
-    background-color: #C4E3D0; /* Intermediate color */
+    background-color: #C4E3D0;
 }
 
 .card4 {
-    background-color: #D0E2CA; /* Intermediate color */
+    background-color: #D0E2CA;
 }
 
 .card5 {
-    background-color: #F5E6CC; /* Light cream */
+    background-color: #F5E6CC;
 }
 
-/* Заголовок картки */
 .algorithm-card h2 {
-    margin: 0; /* Remove default margin */
-    font-size: 1.8em; /* Adjust font size */
-    flex: 1; /* Allow header to grow */
+    margin: 0;
+    font-size: 1.8em;
+    flex: 1;
 }
 
-/* Опис картки */
 .algorithm-card p {
-    margin: 50px; /* Remove default margin */
-    font-size: 1em; /* Adjust font size */
-    flex: 2; /* Allow description to grow more than the header */
-    text-align: center; /* Left align the description */
+    margin: 50px;
+    font-size: 1em;
+    flex: 2;
+    text-align: center;
 }
 
-
-
-
-
-
-/* Секція лабораторії */
 .laboratory-section {
-    width: 100%; /* Full width */
-    text-align: center; /* Center text */
-    margin-top: 40px; /* Space above the section */
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
 }
 
-/* Заголовок лабораторії */
 .laboratory-section h2 {
-    font-size: 2em; /* Adjust font size for the main title */
-    margin-bottom: 10px; /* Space below the title */
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
-/* Підзаголовок лабораторії */
 .laboratory-section p {
-    font-size: 1.2em; /* Adjust font size for the subtitle */
-    margin-bottom: 20px; /* Space below the subtitle */
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
-/* Контейнер для відео */
 .video-container {
-    height: 450px; /* Set height for the video container */
-    width: 700px; /* Set width for the video container */
-    margin: 0 auto; /* Center the video container */
-    background-color: #F5F5F5; /* Light background for the video container */
-    border: 2px dashed #1e1e1e; /* Optional: Dashed border to indicate video area */
-    display: flex; /* Flexbox for centering content */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    color: #1e1e1e; /* Text color for placeholder */
-    font-size: 1.5em; /* Font size for placeholder */
+    height: 450px;
+    width: 700px;
+    margin: 0 auto;
+    background-color: #F5F5F5;
+    border: 2px dashed #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1e1e1e;
+    font-size: 1.5em;
 }

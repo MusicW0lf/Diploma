@@ -1,13 +1,32 @@
 <div class="header-empty"></div class="header-empty">
 <header>
     <a class="header-cell" href="{% url 'user_main' %}">Algolibrary</a>
-    <a class="header-cell" href="{% url 'user_theme' %}">Themes</a>
+    
+    <div class="dropdown">
+        <button class="header-button" onclick="toggleDropdown()">Themes</button>
+        <div class="dropdown-content" id="themeDropdown">
+            <a href="#">Neural Network</a>
+            <a href="#">Generative AI</a>
+            <a href="#">Computer Vision</a>
+            <a href="#">Cryptography</a>
+            <a href="#">Theory of Games</a>
+        </div>
+    </div>
 
-    <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
 
+
+
+    <div class="search-container">
+        <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
+        <button class="search-button" type="submit">
+            <i class="fa fa-search"></i>
+        </button>
+    </div>
+    
+
+
+
+    
     <a class="header-cell"><i class="fa-solid fa-palette"></i></a>
     <a class="header-cell"><i class="fa-solid fa-globe"></i></a>
 
@@ -17,3 +36,23 @@
     <a class="header-cell" href="{% url 'user_login' %}">Login</a>
     <a class="header-cell" href="{% url 'user_register' %}">Sign up</a>
 </header>
+
+<script>
+    function toggleDropdown() {
+        const dropdown = document.getElementById("themeDropdown");
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+
+    // Optional: Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.header-button')) {
+            const dropdowns = document.getElementsByClassName("dropdown-content");
+            for (let i = 0; i < dropdowns.length; i++) {
+                const openDropdown = dropdowns[i];
+                if (openDropdown.style.display === "block") {
+                    openDropdown.style.display = "none";
+                }
+            }
+        }
+    }
+</script>
