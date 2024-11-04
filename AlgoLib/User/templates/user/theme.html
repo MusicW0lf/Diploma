@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
-
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
     
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
@@ -64,6 +64,8 @@ print(my_dog.bark())  # Виведе: Рекс каже гав!
         </div>
 
     </main>
+
+    {% include 'footer.html' %}
 
     <!-- Підключення руху nav -->
     <script src="{% static 'js/nav-movement.js' %}"></script>

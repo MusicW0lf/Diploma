@@ -1,0 +1,142 @@
+/* Загальний стиль секції підписки */
+.subscription-section {
+    text-align: center;
+    padding: 40px;
+    color: #ffffff; /* Білий текст */
+}
+
+.subscription-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subscription-section h3 {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+/* Загальний стиль секції підписки */
+.subscription-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Центрування по висоті */
+    gap: 20px;
+}
+
+/* Стиль карток */
+.subscription-card {
+    background-color: #1e1e1e; /* Темний фон картки */
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    color: #ffffff; /* Білий текст для карток */
+    border: 2px solid #393939; /* Обвідка з кольору #393939 */
+}
+
+/* Зробити середню картку вищою */
+.subscription-card--tall {
+    height: 400px; /* Задайте висоту, яка вам підходить */
+}
+
+
+
+
+/* Стиль заголовка плану */
+.subscription-card h2 {
+    font-size: 24px;
+    color: #005b41; /* Зелений колір для заголовка */
+    margin-bottom: 5px;
+}
+
+/* Стиль ціни */
+.subscription-card .price {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+/* Стиль опису */
+.subscription-card .description {
+    font-size: 14px;
+    margin: 5px 0 15px;
+}
+
+/* Стиль списку */
+.subscription-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.subscription-card ul li {
+    font-size: 14px;
+    margin: 8px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Стиль для галочки */
+.subscription-card ul li::before {
+    content: "✔";
+    color: #005b41; /* Зелений колір для галочки */
+    position: absolute;
+    left: 0;
+}
+
+/* Стиль для останнього пункту з хрестиком у картці Free */
+.subscription-card:first-child ul li:last-child::before {
+    content: "✘"; /* Хрестик для останнього пункту */
+    color: #ff4d4d; /* Червоний для пункту "No support" */
+}
+
+/* Для інших карток останній пункт без хрестика */
+.subscription-card:not(:first-child) ul li:last-child::before {
+    content: ""; /* Без значка для останнього пункту */
+}
+
+
+
+
+
+
+
+
+/* Style for the FAQ section */
+.faq-section {
+    padding: 40px; /* Padding */
+    color: #000000; /* Black text */
+    margin-top: 40px; /* Margin from the previous section */
+}
+
+/* Style for each FAQ item */
+.faq-item {
+    margin-bottom: 10px; /* Space between items */
+    border-radius: 12px; /* Rounded corners */
+    background-color: #ffffff;
+    border: 1px solid #393939; /* Border color */
+    overflow: hidden; /* Ensures the rounded corners are applied */
+}
+
+/* Style for the question button */
+.faq-question {
+    background: none; /* Transparent background */
+    border: none; /* No border */
+    color: #000; /* Black text */
+    font-size: 16px; /* Font size for questions */
+    cursor: pointer; /* Cursor changes to pointer */
+    text-align: left; /* Left align text */
+    width: 100%; /* Full width */
+    padding: 15px; /* Padding inside button */
+}
+
+/* Style for the answer section */
+.faq-answer {
+    display: none; /* Hidden by default */
+    padding: 10px; /* Padding for the answer */
+    font-size: 14px; /* Font size for the answer */
+    background-color: #f9f9f9; /* Light gray background for answers */
+}

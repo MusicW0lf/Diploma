@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main-sub.css' %}">   
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">    
     
 </style>
@@ -22,20 +23,101 @@
     {% include 'header.html' %}
     
     <main>
-        <h1>Sub</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
+        <section class="subscription-section">
+            <h1>Unlock Advanced Features</h1>
+            <h3>By subscribing to a plan, you support AlgoLaboratory’s mission to make algorithm education accessible to everyone</h3>
+            
+            <div class="subscription-cards">
+                <!-- Free Plan -->
+                <div class="subscription-card">
+                    <h2>Free</h2>
+                    <p class="price">$0 / Forever</p>
+                    <p class="description">Perfect for beginners to explore algorithms.</p>
+                    <ul>
+                        <li>Track learning progress</li>
+                        <li>Access to basic courses (Neural Network, Cryptography)</li>
+                        <li>Limited code editing and execution</li>
+                        <li>Ad-supported experience</li>
+                        <li>Community forum access</li>
+                        <li>No support</li>
+                    </ul>
+                </div>
+        
+                <!-- Monthly Plan -->
+                <div class="subscription-card subscription-card--tall">
+                    <h2>Monthly</h2>
+                    <p class="price">$9.99 / Month</p>
+                    <p class="description">For users aiming to deepen their algorithm knowledge.</p>
+                    <ul>
+                        <li>Ad-free experience</li>
+                        <li>Full access to all courses (GenAI, CV, Theory of Games)</li>
+                        <li>Complete access to code lab for editing and running code</li>
+                        <li>Save up to 5 personal projects</li>
+                        <li>Monthly live workshops</li>
+                        <li>Priority forum support</li>
+                        <li>10% discount on paid courses</li>
+                        <li>Cancel anytime</li>
+                    </ul>
+                </div>
+
+        
+                <!-- Yearly Plan -->
+                <div class="subscription-card">
+                    <h2>Yearly</h2>
+                    <p class="price">$99.99 / Year</p>
+                    <p class="description">Comprehensive access for dedicated learners.</p>
+                    <ul>
+                        <li>Everything included in Monthly</li>
+                        <li>Unlimited personal project storage</li>
+                        <li>Certification exams</li>
+                        <li>Access to exclusive content and case studies</li>
+                        <li>24/7 dedicated support</li>
+                        <li>Early access to new courses and features</li>
+                        <li>Option to become a course beta tester</li>
+                        <li>20% discount on paid courses</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        <section class="faq-section">
+            <div class="faq-item">
+                <button class="faq-question">What’s the benefit and details of the subscription plans?</button>
+                <div class="faq-answer">
+                    <p>Subscription allows access to advanced courses, support, and features not available to free users.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What happens if I cancel my subscription?</button>
+                <div class="faq-answer">
+                    <p>You will continue to enjoy all benefits until the end of your subscription term, after which access will be revoked.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Can I subscribe multiple accounts at once?</button>
+                <div class="faq-answer">
+                    <p>Yes, you can subscribe to multiple accounts simultaneously, but each account needs its own subscription.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">How can I upgrade or downgrade my subscription?</button>
+                <div class="faq-answer">
+                    <p>You can upgrade or downgrade your subscription at any time through your account settings.</p>
+                </div>
+            </div>
+        </section>
+        <script>
+            document.querySelectorAll('.faq-question').forEach(button => {
+                button.addEventListener('click', () => {
+                    const answer = button.nextElementSibling;
+                    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        </script>
+
+
     </main>
 
     {% include 'footer.html' %}

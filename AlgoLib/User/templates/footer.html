@@ -22,5 +22,25 @@
         </div>
         
         <button class="scroll-top">&#9650;</button>
+        <script>
+            // Scroll to top functionality
+            const scrollTopButton = document.querySelector('.scroll-top');
+
+            scrollTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth' // Smooth scrolling effect
+                });
+            });
+
+            // Show/hide button based on scroll position
+            window.addEventListener('scroll', () => {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    scrollTopButton.style.display = 'flex'; // Show button
+                } else {
+                    scrollTopButton.style.display = 'none'; // Hide button
+                }
+            });
+        </script>
     </div>
 </footer>

@@ -15,6 +15,7 @@ header {
     justify-content: space-around;
     top: 0;
     z-index: 2;
+    border-bottom: 2px solid #fff; /* Обвідка знизу для заголовка */
 }
 
 .header-cell {

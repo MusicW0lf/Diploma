@@ -8,6 +8,7 @@ footer {
     position: relative;
     bottom: 0;
     z-index: 2;
+    border-top: 2px solid #fff; /* Обвідка знизу для заголовка */
 }
 
 .footer-container {
