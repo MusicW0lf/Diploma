@@ -1,0 +1,127 @@
+.project-main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+}
+
+.sort {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.sort span {
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.sort-btn {
+    padding: 8px 16px;
+    font-size: 1rem;
+    margin: 0 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer;
+}
+
+.sort-btn:hover {
+    background-color: #0056b3;
+}
+
+.create-project {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer;
+}
+
+.create-project:hover {
+    background-color: #218838;
+}
+
+/* Project grid styles */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0;
+}
+
+.project-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    background-color: #ccc;
+    position: relative;
+}
+
+.project-lang {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Update the languages in the projects */
+.project-card:nth-child(1) .project-lang { background-color: #007bff; } /* Python */
+.project-card:nth-child(2) .project-lang { background-color: #f39c12; } /* Java */
+.project-card:nth-child(3) .project-lang { background-color: #e74c3c; } /* JavaScript */
+.project-card:nth-child(4) .project-lang { background-color: #8e44ad; } /* Ruby */
+.project-card:nth-child(5) .project-lang { background-color: #2ecc71; } /* Go */
+.project-card:nth-child(6) .project-lang { background-color: #3498db; } /* C++ */
+.project-card:nth-child(7) .project-lang { background-color: #16a085; } /* PHP */
+.project-card:nth-child(8) .project-lang { background-color: #34495e; } /* Swift */
+.project-card:nth-child(9) .project-lang { background-color: #9b59b6; } /* Kotlin */
+.project-card:nth-child(10) .project-lang { background-color: #1abc9c; } /* C# */
+
+/* No background color for the project grid container */
+.project-grid {
+    background-color: transparent;
+}

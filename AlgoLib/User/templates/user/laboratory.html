@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main-lab.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">    
     
 </style>
@@ -21,22 +22,72 @@
 <body>
     {% include 'header.html' %}
     
-    <main>
-        <h1>lab</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-        <h1>A</h1>
-    </main>
+    <main class="project-main">
+        <div class="header">
+            <h1>Projects</h1>
+            <div class="controls">
+                <div class="sort">
+                    <span>Sort</span>
+                    <button class="sort-btn">Date</button>
+                    <button class="sort-btn">A - Z</button>
+                </div>
+                <button class="create-project">+ Create a project</button>
+            </div>
+        </div>
+    
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-image" style="background: linear-gradient(to right, #3498db, #8e44ad);"></div>
+                <div class="project-lang">Python</div>
+                <div class="project-title">New project</div>
+            </div>
+            <div class="project-card">
+                <div class="project-image" style="background: linear-gradient(to right, #3498db, #8e44ad);"></div>
+                <div class="project-lang">Java</div>
+                <div class="project-title">Basics of Neural Networks</div>
+            </div>
+            <div class="project-card">
+                <div class="project-image" style="background: linear-gradient(to right, #f39c12, #e74c3c);"></div>
+                <div class="project-lang">JavaScript</div>
+                <div class="project-title">Classification Using K-Nearest Neighbors (KNN)</div>
+            </div>
+            <div class="project-card">
+                <div class="project-image" style="background: linear-gradient(to right, #2ecc71, #3498db);"></div>
+                <div class="project-lang">Ruby</div>
+                <div class="project-title">Machine Learning: Regression</div>
+            </div>
+            <div class="project-card">
+                <div class="project-image" style="background: linear-gradient(to right, #e74c3c, #2ecc71);"></div>
+                <div class="project-lang">Go</div>
+                <div class="project-title">Time Series Forecasting</div>
+            </div>
+            <div class="project-card">
+                <div class="project-image" style="background: linear-gradient(to right, #3498db, #1abc9c);"></div>
+                <div class="project-lang">C++</div>
+                <div class="project-title">Pathfinding with A* Algorithm</div>
+            </div>
+            <div class="project-card">
+                <div class="project-image" style="background: linear-gradient(to right, #f39c12, #e74c3c);"></div>
+                <div class="project-lang">PHP</div>
+                <div class="project-title">Cryptography Models: AES Encryption</div>
+            </div>
+            <div class="project-card">
+                <div class="project-image" style="background: linear-gradient(to right, #8e44ad, #3498db);"></div>
+                <div class="project-lang">Swift</div>
+                <div class="project-title">Genetic Algorithm for Optimal Solutions</div>
+            </div>
+            <div class="project-card">
+                <div class="project-image" style="background: linear-gradient(to right, #1abc9c, #9b59b6);"></div>
+                <div class="project-lang">Kotlin</div>
+                <div class="project-title">Game Theory: Prisoner's Dilemma Simulation</div>
+            </div>
+            <div class="project-card">
+                <div class="project-image" style="background: linear-gradient(to right, #9b59b6, #16a085);"></div>
+                <div class="project-lang">C#</div>
+                <div class="project-title">Computer Vision: Face Recognition</div>
+            </div>
+        </div>
+    </main>    
 
     {% include 'footer.html' %}
 
