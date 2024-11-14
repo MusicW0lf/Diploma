@@ -27,32 +27,39 @@
 
 
     
-    <a class="header-cell"><i class="fa-solid fa-palette"></i></a>
-    <a class="header-cell"><i class="fa-solid fa-globe"></i></a>
+    <a class="header-cell" style="width: 50px;"><i class="fa-solid fa-palette"></i></a>
 
     <a class="header-cell" href="{% url 'user_subscription' %}"><i class="fa-solid fa-feather"></i>Subscription</a>
     <a class="header-cell" href="{% url 'user_courses' %}"><i class="fa-brands fa-leanpub"></i>Courses</a>
     <a class="header-cell" href="{% url 'user_laboratory' %}"><i class="fa-solid fa-flask"></i>Laboratory</a>
-    <a class="header-cell" href="{% url 'user_login' %}">Login</a>
-    <a class="header-cell" href="{% url 'user_register' %}">Sign up</a>
+    
+    <a class="header-cell" style="width: 50px;"><i class="fa-solid fa-globe"></i></a>
+
+    <a class="header-cell" style="width: 80px;" href="{% url 'user_login' %}">Login</a>
+    <a class="header-cell" style="width: 80px;" href="{% url 'user_register' %}">Sign up</a>
 </header>
 
 <script>
-    function toggleDropdown() {
-        const dropdown = document.getElementById("themeDropdown");
-        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-    }
+    // Отримуємо елементи для кнопки та випадаючого меню
+    const headerButton = document.querySelector('.header-button');
+    const dropdown = document.getElementById('themeDropdown');
 
-    // Optional: Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-        if (!event.target.matches('.header-button')) {
-            const dropdowns = document.getElementsByClassName("dropdown-content");
-            for (let i = 0; i < dropdowns.length; i++) {
-                const openDropdown = dropdowns[i];
-                if (openDropdown.style.display === "block") {
-                    openDropdown.style.display = "none";
-                }
-            }
-        }
-    }
+    // Відкриття меню при наведенні на кнопку
+    headerButton.addEventListener('mouseover', function() {
+        dropdown.style.display = 'block';
+    });
+
+    // Закриття меню, коли миша покидає кнопку або меню
+    headerButton.addEventListener('mouseout', function() {
+        dropdown.style.display = 'none';
+    });
+
+    // Закриття меню, коли миша покидає саму область випадаючого меню
+    dropdown.addEventListener('mouseover', function() {
+        dropdown.style.display = 'block';
+    });
+
+    dropdown.addEventListener('mouseout', function() {
+        dropdown.style.display = 'none';
+    });
 </script>

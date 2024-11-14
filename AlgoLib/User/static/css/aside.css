@@ -1,0 +1,13 @@
+.sidebar {
+    width: 3cm; /* Set width to 3cm */
+    background-color: #393939; /* Dark background color */
+    border-left: 2px solid #fff; /* White left border line */
+    
+    padding: 10px;
+    box-sizing: border-box;
+    height: 100%;
+    position: relative;
+    top: 2.5cm;
+    right: 0;
+    
+}

@@ -7,4 +7,8 @@ body {
     font-family: "Times New Roman", Times, serif;
     background: linear-gradient(to bottom, #393939, #1e1e1e);
     color: #ffffff;
+
+    /* display: flex;          
+    flex-direction: column; 
+    height: 100%;           */
 }
