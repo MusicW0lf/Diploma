@@ -41,8 +41,9 @@
                         <li>Community forum access</li>
                         <li>No support</li>
                     </ul>
+                    <button class="buy-button">Buy</button>
                 </div>
-        
+            
                 <!-- Monthly Plan -->
                 <div class="subscription-card subscription-card--tall">
                     <h2>Monthly</h2>
@@ -58,9 +59,9 @@
                         <li>10% discount on paid courses</li>
                         <li>Cancel anytime</li>
                     </ul>
+                    <button class="buy-button">Buy</button>
                 </div>
-
-        
+            
                 <!-- Yearly Plan -->
                 <div class="subscription-card">
                     <h2>Yearly</h2>
@@ -76,8 +77,9 @@
                         <li>Option to become a course beta tester</li>
                         <li>20% discount on paid courses</li>
                     </ul>
+                    <button class="buy-button">Buy</button>
                 </div>
-            </div>
+            </div>            
         </section>
         
         
@@ -111,6 +113,10 @@
         <script>
             document.querySelectorAll('.faq-question').forEach(button => {
                 button.addEventListener('click', () => {
+                    // Перемикаємо клас .active для кнопки
+                    button.classList.toggle('active');
+
+                    // Перемикаємо відображення відповіді
                     const answer = button.nextElementSibling;
                     answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
                 });

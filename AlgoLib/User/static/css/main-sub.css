@@ -45,7 +45,7 @@ main {
 
 /* Зробити середню картку вищою */
 .subscription-card--tall {
-    height: 400px; /* Задайте висоту, яка вам підходить */
+    height: 420px; /* Задайте висоту, яка вам підходить */
 }
 
 
@@ -104,6 +104,23 @@ main {
 
 
 
+/* Стиль для кнопки Buy */
+.buy-button {
+    background-color: #005b41; /* Зелений колір фону */
+    color: white; /* Білий текст */
+    border: none; /* Без обводки */
+    padding: 10px 20px; /* Відступи */
+    font-size: 16px; /* Розмір шрифта */
+    width: 100%; /* Кнопка на всю ширину картки */
+    border-radius: 8px; /* Заокруглені кути */
+    cursor: pointer; /* Курсор pointer на наведенні */
+    transition: background-color 0.3s; /* Анімація для ховера */
+}
+
+/* Ховер для кнопки Buy */
+.buy-button:hover {
+    background-color: #004b33; /* Темніший зелений на ховері */
+}
 
 
 
@@ -116,31 +133,49 @@ main {
     margin-top: 40px; /* Margin from the previous section */
 }
 
-/* Style for each FAQ item */
+/* Стиль для секції FAQ */
 .faq-item {
-    margin-bottom: 10px; /* Space between items */
-    border-radius: 12px; /* Rounded corners */
+    margin-bottom: 10px; /* Простір між елементами */
+    border-radius: 12px; /* Заокруглені кути */
     background-color: #ffffff;
-    border: 1px solid #393939; /* Border color */
-    overflow: hidden; /* Ensures the rounded corners are applied */
+    border: 1px solid #393939; /* Колір обводки */
+    overflow: hidden; /* Забезпечує правильне заокруглення кутів */
 }
 
-/* Style for the question button */
+/* Стиль для кнопки питання */
 .faq-question {
-    background: none; /* Transparent background */
-    border: none; /* No border */
-    color: #000; /* Black text */
-    font-size: 16px; /* Font size for questions */
-    cursor: pointer; /* Cursor changes to pointer */
-    text-align: left; /* Left align text */
-    width: 100%; /* Full width */
-    padding: 15px; /* Padding inside button */
+    background-color: #f0f0f0; /* Світлий фон для кнопки */
+    color: #000; /* Чорний текст */
+    border: none; /* Без обводки */
+    font-size: 16px; /* Розмір шрифта */
+    padding: 15px; /* Відступи всередині кнопки */
+    width: 100%; /* Кнопка займає всю ширину */
+    cursor: pointer; /* Курсор на pointer */
+    text-align: left; /* Ліве вирівнювання тексту */
+    transition: background-color 0.3s ease; /* Анімація при зміні фону */
 }
 
-/* Style for the answer section */
+/* Ховер ефект для кнопки */
+.faq-question:hover {
+    background-color: #005b41; /* Трохи темніший фон на ховері */
+    color: #fff; /* Білий текст */
+}
+
+/* Стиль для активного питання (після натискання) */
+.faq-question.active {
+    background-color: #005b41; /* Той самий темний фон, що і для ховера */
+    color: #fff; /* Білий текст */
+}
+
+/* Стиль для відповіді */
 .faq-answer {
-    display: none; /* Hidden by default */
-    padding: 10px; /* Padding for the answer */
-    font-size: 14px; /* Font size for the answer */
-    background-color: #f9f9f9; /* Light gray background for answers */
+    display: none; /* Приховано за замовчуванням */
+    padding: 10px; /* Відступи всередині відповіді */
+    background-color: #f9f9f9; /* Світло-сірий фон */
+    font-size: 14px; /* Розмір шрифта */
+}
+
+/* Стиль для відкритих відповідей */
+.faq-answer.show {
+    display: block; /* Відображаємо відповідь */
 }
