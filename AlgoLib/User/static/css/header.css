@@ -43,7 +43,7 @@ header {
     display: flex; /* Use flexbox for layout */
     align-items: center; /* Center items vertically */
     border-radius: 25px; /* Rounded corners */
-    background-color: #f1f1f1; /* Light background color */
+    background-color: #393939; /* Light background color */
     padding: 5px; /* Padding for spacing */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
 }
