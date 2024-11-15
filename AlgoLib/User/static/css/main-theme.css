@@ -64,3 +64,61 @@ section h3 {
 section p {
     font-size: 16px;
 }
+
+
+
+
+
+/* Основні стилі для контейнера з питаннями (quiz) */
+.question-container {
+    background-color: #393939;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+.question-container h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.question-container p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.question-container input[type="radio"] {
+    margin-right: 10px;
+}
+
+.question-container label {
+    font-size: 1rem;
+}
+
+.question-container button {
+    background-color: #007bff;
+    transition: 0.5s;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.question-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Повідомлення про результат */
+#q1Answer, #q2Answer, #q3Answer, #q4Answer {
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
