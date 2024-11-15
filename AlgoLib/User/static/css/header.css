@@ -14,12 +14,12 @@ header {
     align-items: center;
     justify-content: space-around;
     top: 0;
-    z-index: 2;
-    border-bottom: 2px solid #fff; /* Обвідка знизу для заголовка */
+    z-index: 5000;
+    border-bottom: 2px solid #fff;
 }
 
 .header-cell {
-    width: 120px;
+    width: 150px;
     height: 40px;
     border-radius: 25px;
     display: flex;

@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,64 +12,65 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main-theme.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
     
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Add Prism.js for syntax highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/themes/prism-okaidia.min.css" rel="stylesheet" />
 </head>
 <body>
     {% include 'header.html' %}
     {% include 'nav.html' %}
 
-    <!-- Основний контент -->
+    <!-- Main content -->
     <main id="mainContent">
-        <div class="content-container">
-            <h2>Розділ 1</h2>
-            <p>Python — це потужна та проста у використанні мова програмування, яка підходить для початківців. Ось кілька основних моментів для новачків:</p>
-            <div class="code-container">
-                <pre class="code">
-# Простий приклад програми на Python
-print("Привіт, світ!")
-                </pre>
-            </div>
-        </div>
-        <div class="content-container">
-            <h2>Розділ 2</h2>
-            <p>У Python можна легко працювати зі списками. Ось приклад, як додати елементи до списку та вивести їх на екран:</p>
-            <div class="code-container">
-                <pre class="code">
-# Приклад роботи зі списками
-my_list = [1, 2, 3]
-my_list.append(4)  # Додаємо 4 до списку
-print(my_list)     # Виведе: [1, 2, 3, 4]
-                </pre>
-            </div>
-        </div>
-        <div class="content-container">
-            <h2>Розділ 3</h2>
-            <p>Python також підтримує створення класів. Ось простий приклад класу та об'єкта:</p>
-            <div class="code-container">
-                <pre class="code">
-# Приклад об'єктно-орієнтованого програмування
-class Dog:
-    def __init__(self, name):
-        self.name = name
-    
-    def bark(self):
-        return f"{self.name} каже гав!"
+        <h2>Welcome to AlgoLib</h2>
+        <p>Explore various algorithms and neural networks topics to enhance your understanding of AI.</p>
 
-my_dog = Dog("Рекс")
-print(my_dog.bark())  # Виведе: Рекс каже гав!
-                </pre>
-            </div>
-        </div>
+        <section id="intro">
+            <h3>Introduction to Artificial Intelligence</h3>
+            <p>Artificial Intelligence (AI) refers to the simulation of human intelligence in machines. AI enables machines to learn from experience, adapt to new inputs, and perform human-like tasks.</p>
+            <p>In this platform, we provide a comprehensive collection of algorithms, tutorials, and real-world examples for learning and implementing AI concepts.</p>
+        </section>
 
+        <section id="neural-networks">
+            <h3>Neural Networks Overview</h3>
+            <p>Neural networks are a class of machine learning models inspired by the human brain. These networks are designed to recognize patterns and make decisions based on the data provided to them.</p>
+            <p>Our platform includes resources to learn about neural networks, from simple perceptrons to deep learning models.</p>
+        </section>
+
+        <section id="popular-algorithms">
+            <h3>Popular Algorithms</h3>
+            <ul>
+                <li><b>Linear Regression:</b> A basic algorithm for predicting continuous values based on input data.</li>
+                <li><b>Decision Trees:</b> A model that makes decisions based on a series of binary decisions or splits.</li>
+                <li><b>Support Vector Machines:</b> An algorithm used for classification tasks that finds the optimal separating hyperplane.</li>
+                <li><b>K-Means Clustering:</b> An unsupervised learning algorithm used for clustering data points into distinct groups.</li>
+                <li><b>Neural Networks:</b> Used for classification, regression, and generative tasks based on complex patterns in data.</li>
+            </ul>
+        </section>
+
+        <section id="deep-learning">
+            <h3>Deep Learning</h3>
+            <p>Deep learning is a subset of machine learning involving multi-layered neural networks. These networks are capable of learning from vast amounts of data, and they are the backbone of cutting-edge AI systems such as image recognition and natural language processing.</p>
+            <p>In this section, we explore various architectures of deep learning models, including Convolutional Neural Networks (CNNs) and Recurrent Neural Networks (RNNs).</p>
+        </section>
+
+        <section id="resources">
+            <h3>Resources & Tutorials</h3>
+            <p>We provide a variety of resources, including articles, tutorials, and code samples to help you understand the implementation of algorithms and neural networks.</p>
+            <p>Whether you're a beginner or an expert, AlgoLib offers valuable insights for everyone looking to dive into the world of AI.</p>
+        </section>
     </main>
 
     {% include 'footer.html' %}
 
-    <!-- Підключення руху nav -->
+    <!-- JavaScript -->
     <script src="{% static 'js/nav-movement.js' %}"></script>
-    <!-- Підключення JavaScript Bootstrap -->
+    <script src="{% static 'js/content.js' %}"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Include Prism.js for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/plugins/clipboard/prism-clipboard.min.js"></script>
 </body>
 </html>
