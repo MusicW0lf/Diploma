@@ -41,6 +41,7 @@ main {
     text-align: left;
     color: #ffffff; /* Білий текст для карток */
     border: 2px solid #005b41; /* Обвідка з кольору #393939 */
+    transition: 0.5s;
 }
 
 /* Зробити середню картку вищою */
@@ -48,6 +49,9 @@ main {
     height: 420px; /* Задайте висоту, яка вам підходить */
 }
 
+.subscription-card:hover {
+    transform: scale(1.02); /* збільшуємо на 5% при наведенні */
+}
 
 
 

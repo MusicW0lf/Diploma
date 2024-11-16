@@ -26,7 +26,7 @@ main {
 }
 
 .algorithms-section {
-    width: 95%;
+    width: 92.5%;
     padding: 2.5%;
 }
 
@@ -43,6 +43,7 @@ main {
     text-align: center;
     padding: 20px;
     background-color: #f9f9f9;
+    transition: 0.5s;
 }
 
 .algorithm-content {
