@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Code Executor</title>
+</head>
+<body>
+    <h1>Python Code Executor</h1>
+    <form id="code-form">
+        <textarea id="code" rows="10" cols="50" placeholder="Write your Python code here..."></textarea>
+        <br>
+        <button type="button" onclick="executeCode()">Run Code</button>
+    </form>
+    <h2>Output:</h2>
+    <pre id="output"></pre>
+    <h2>Error:</h2>
+    <pre id="error"></pre>
+
+    <script>
+        function executeCode() {
+            const code = document.getElementById('code').value;
+            fetch('/laboratory/execute/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ code }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('output').textContent = data.stdout || 'No Output';
+                document.getElementById('error').textContent = data.error || 'No Errors';
+            })
+            .catch(error => {
+                document.getElementById('error').textContent = 'Error: ' + error;
+            });
+        }
+    </script>
+</body>
+</html>
