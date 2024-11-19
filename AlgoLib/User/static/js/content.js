@@ -82,7 +82,7 @@ function loadContent(section) {
                    <p>The perceptron function is defined as:</p>
                    <div class="code-container">
                        <span class="copy-button" onclick="copyCode(this)">Copy</span>
-                       <pre><code class="language-python"># Python representation of perceptron
+                       <pre><code class="lang-py"># Python representation of perceptron
 def perceptron(input, weights, threshold):
     weighted_sum = sum(w * i for w, i in zip(weights, input))
     return 1 if weighted_sum >= threshold else 0

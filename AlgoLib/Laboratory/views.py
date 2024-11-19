@@ -22,7 +22,6 @@ def execute_code(request):
 
             # Add specific allowed built-ins
             allowed_builtins = {
-                'print': print,  # Allow print
                 'range': range,
                 'len': len,
                 'int': int,
@@ -40,10 +39,10 @@ def execute_code(request):
                 'all': all,
                 'enumerate': enumerate,
                 'zip': zip,
+        
             }
 
             def custom_print(*args, **kwargs):
-                # Convert printed arguments to a string and join with spaces
                 result.append(" ".join(map(str, args)))
 
             allowed_builtins['print'] = custom_print
