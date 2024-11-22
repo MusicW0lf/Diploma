@@ -1,0 +1,84 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use</title>
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main-code.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="{% static 'image/favicon.ico' %}">
+</head>
+<style>
+    main {
+        padding-left: 1cm;
+        width: calc(100% - 1cm);
+    }
+</style>
+<body>
+    <!-- Header -->
+    {% include 'header.html' %}
+    
+    <!-- Main Content -->
+    <main class="d-flex justify-content-center">
+        <div class="container">
+            <h1 class="mb-4">Terms of Use</h1>
+            
+            <section class="mb-3">
+                <h2>1. General Provisions</h2>
+                <p>This document outlines the terms and conditions for using this website.</p>
+            </section>
+            
+            <section class="mb-3">
+                <h2>2. Use of Content</h2>
+                <p>All materials on this website are protected by copyright. Unauthorized copying is prohibited.</p>
+            </section>
+            
+            <section class="mb-3">
+                <h2>3. Limitation of Liability</h2>
+                <p>The website administration is not responsible for any misuse of the materials provided.</p>
+            </section>
+            
+            <section class="mb-3">
+                <h2>4. Changes to the Terms</h2>
+                <p>The administration reserves the right to amend these terms without prior notice.</p>
+            </section>
+            
+            <section class="mb-3">
+                <h2>5. Privacy Policy</h2>
+                <p>Your privacy is important to us. We collect data to improve your experience, but we are committed to protecting your personal information and complying with applicable privacy laws.</p>
+            </section>
+            
+            <section class="mb-3">
+                <h2>6. Account Registration</h2>
+                <p>To access certain features of the website, you may be required to register an account. You are responsible for maintaining the confidentiality of your account information.</p>
+            </section>
+            
+            <section class="mb-3">
+                <h2>7. Prohibited Uses</h2>
+                <p>You agree not to engage in activities that could harm, disrupt, or interfere with the operation of the website, including but not limited to malicious software, unauthorized access, or spamming.</p>
+            </section>
+            
+            <section class="mb-3">
+                <h2>8. Third-Party Links</h2>
+                <p>This website may contain links to third-party websites. We do not endorse or assume responsibility for the content, privacy policies, or practices of these websites.</p>
+            </section>
+            
+            <section class="mb-3">
+                <h2>9. Governing Law</h2>
+                <p>These terms are governed by the laws of the jurisdiction where the website is operated, and any disputes will be resolved in accordance with those laws.</p>
+            </section>
+            
+            <section class="mb-3">
+                <h2>10. Termination of Access</h2>
+                <p>We reserve the right to terminate or suspend access to the website or services for any user who violates these terms or engages in unlawful activities.</p>
+            </section>
+
+        </div>
+    </main>
+</body>
+<script src="https://kit.fontawesome.com/985061e91f.js" crossorigin="anonymous"></script>
+</html>
