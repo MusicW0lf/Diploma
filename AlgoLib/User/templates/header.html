@@ -5,11 +5,11 @@
     <div class="dropdown">
         <button class="header-button" onclick="toggleDropdown()">Themes</button>
         <div class="dropdown-content" id="themeDropdown">
-            <a href="#">Neural Network</a>
-            <a href="#">Generative AI</a>
-            <a href="#">Computer Vision</a>
-            <a href="#">Cryptography</a>
-            <a href="#">Theory of Games</a>
+            <a href="{% url 'user_theme' %}">Neural Network</a>
+            <a href="{% url 'user_theme' %}">Generative AI</a>
+            <a href="{% url 'user_theme' %}">Computer Vision</a>
+            <a href="{% url 'user_theme' %}">Cryptography</a>
+            <a href="{% url 'user_theme' %}">Theory of Games</a>
         </div>
     </div>
 
@@ -34,9 +34,13 @@
     <a class="header-cell" href="{% url 'user_laboratory' %}"><i class="fa-solid fa-flask"></i>&nbsp;Laboratory</a>
     
     <a class="header-cell" style="width: 50px;"><i class="fa-solid fa-globe"></i></a>
-
+    {% if not user.is_authenticated %}
     <a class="header-cell" style="width: 80px;" href="{% url 'user_login' %}">Login</a>
     <a class="header-cell" style="width: 80px;" href="{% url 'user_register' %}">Sign up</a>
+    {% endif %}
+    <a href="{% url 'logout_view' %}" class="header-link">
+        <span class="header-cell" style="width: 80px;">{{ user.username }}</span>
+    </a>
 </header>
 
 <script>

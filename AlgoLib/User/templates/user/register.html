@@ -46,11 +46,12 @@
                     <button class="btn btn-outline-secondary w-100" style="margin: 0px 5px;"><i class="fab fa-gitlab mr-2"></i>Gitlab</button>
                 </div>
                 <p class="or">OR</p>
-                <form class="signup-form">
-                    <input type="text" placeholder="Full Name" class="form-control mb-2">
-                    <input type="email" placeholder="Email" class="form-control mb-2">
-                    <input type="password" placeholder="Password" class="form-control mb-2">
-                    <input type="password" placeholder="Confirm Password" class="form-control mb-3">
+                <form method="POST" action="{% url 'registration' %}">
+                    {% csrf_token %}
+                    <input type="text" name="username" placeholder="Full Name" class="form-control mb-2" required>
+                    <input type="email" name="email" placeholder="Email" class="form-control mb-2" required>
+                    <input type="password" name="password" placeholder="Password" class="form-control mb-2" required>
+                    <input type="password" name="password_confirm" placeholder="Confirm Password" class="form-control mb-3" required>
                     <button type="submit" class="btn btn-success w-100">Sign Up</button>
                 </form>
                 <p class="terms">
