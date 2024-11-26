@@ -1,9 +1,12 @@
+/* Основні стилі для контейнера */
 .project-main {
     padding: 20px;
     max-width: 1200px;
+    min-height: calc(100vh - 7.5cm);
     margin: 0 auto;
 }
 
+/* Заголовок */
 .header {
     display: flex;
     justify-content: space-between;
@@ -17,6 +20,7 @@
     font-weight: bold;
 }
 
+/* Панель управління */
 .controls {
     display: flex;
     align-items: center;
@@ -40,8 +44,9 @@
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 30px; /* Rounded corners */
+    border-radius: 30px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .sort-btn:hover {
@@ -54,28 +59,74 @@
     background-color: #28a745;
     color: white;
     border: none;
-    border-radius: 30px; /* Rounded corners */
+    border-radius: 30px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .create-project:hover {
     background-color: #218838;
 }
 
-/* Project grid styles */
+/* Випадаюче меню для створення проекту */
+.create-project-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: block; /* Змінено на block для плавного переходу */
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background-color: #f8f9fa;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+    padding: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.dropdown-item:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Активація меню при наведенні */
+.create-project-dropdown:hover .dropdown-menu,
+.create-project-dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Сітка проектів */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
+    background-color: transparent;
     padding: 0;
 }
 
+/* Карточки проектів */
 .project-card {
     background-color: #f8f9fa;
     border-radius: 8px;
-    padding: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
 }
 
 .project-card:hover {
@@ -83,6 +134,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Зображення проекту */
 .project-image {
     width: 100%;
     height: 200px;
@@ -90,18 +142,20 @@
     position: relative;
 }
 
+/* Мітка мови проекту */
 .project-lang {
     position: absolute;
     top: 10px;
     left: 10px;
     font-size: 1rem;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 5px 10px;
     border-radius: 5px;
     font-weight: bold;
 }
 
+/* Заголовок проекту */
 .project-title {
     font-size: 1.2rem;
     font-weight: 600;
@@ -110,7 +164,7 @@
     text-align: center;
 }
 
-/* Update the languages in the projects */
+/* Індивідуальні кольори міток для мов */
 .project-card:nth-child(1) .project-lang { background-color: #007bff; } /* Python */
 .project-card:nth-child(2) .project-lang { background-color: #f39c12; } /* Java */
 .project-card:nth-child(3) .project-lang { background-color: #e74c3c; } /* JavaScript */
@@ -121,8 +175,3 @@
 .project-card:nth-child(8) .project-lang { background-color: #34495e; } /* Swift */
 .project-card:nth-child(9) .project-lang { background-color: #9b59b6; } /* Kotlin */
 .project-card:nth-child(10) .project-lang { background-color: #1abc9c; } /* C# */
-
-/* No background color for the project grid container */
-.project-grid {
-    background-color: transparent;
-}
