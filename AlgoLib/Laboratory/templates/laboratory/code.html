@@ -27,7 +27,7 @@
                 <textarea id="code" rows="12" class="code-editor" 
                           placeholder="Write your Python code here..."
                           onkeydown="handleTab(event)" 
-                          oninput="updatePreview()"></textarea>
+                          oninput="updatePreview()">{{project.code}}</textarea>
                 <div class="button-group">
                     <button type="button" class="btn btn-success run-button" onclick="executeCode()">Run Code</button>
                 </div>
@@ -35,7 +35,7 @@
 
             <section class="preview-section">
                 <h2>Preview</h2>
-                <pre><code id="preview" class="language-python"></code></pre>
+                <pre><code id="preview" class="language-python">{{project.code}}</code></pre>
             </section>
 
             <section class="output-section">
@@ -58,12 +58,15 @@
     <script>
         function executeCode() {
             const code = document.getElementById('code').value;
+            const projectId = "{{ project.project_id }}"; // Pass the project ID from the template context
+
             fetch('/laboratory/execute/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'X-CSRFToken': '{{ csrf_token }}',
                 },
-                body: JSON.stringify({ code }),
+                body: JSON.stringify({ code, project_id: projectId }),
             })
             .then(response => response.json())
             .then(data => {

@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoLib</title>
+
+    <script src="https://kit.fontawesome.com/985061e91f.js" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="icon" href="{% static 'image/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'css/main-lab.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    
+</style>
+
+<body>
+    {% include 'header.html' %}
+    
+    <main class="project-main">
+        <div class="header">
+            <h1>Projects</h1>
+            <div class="controls">
+                <div class="sort">
+                    <span>Sort</span>
+                    <button class="sort-btn">Date</button>
+                    <button class="sort-btn">A - Z</button>
+                </div>
+                <!-- Dropdown for project creation -->
+                <div class="create-project-dropdown">
+                    <button class="create-project">+ Create a project</button>
+                    <div class="dropdown-menu">
+                        <a href="{% url 'create-project' language='Python' %}" class="dropdown-item">Python</a>
+                        <a href="#" class="dropdown-item">Java</a>
+                        <a href="#" class="dropdown-item">JavaScript</a>
+                        <a href="#" class="dropdown-item">Ruby</a>
+                        <a href="#" class="dropdown-item">Go</a>
+                        <a href="#" class="dropdown-item">C++</a>
+                        <a href="#" class="dropdown-item">PHP</a>
+                        <a href="#" class="dropdown-item">Swift</a>
+                        <a href="#" class="dropdown-item">Kotlin</a>
+                        <a href="#" class="dropdown-item">C#</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="project-grid">
+        {% for project in projects %}
+        <a href="/laboratory/{{ project.project_id}}/">
+            <div class="project-card">
+                <div class="project-image" style="background: linear-gradient(to right, {{ project.random_colors.0 }}, {{ project.random_colors.1 }});"></div>
+                <div class="project-lang">{{ project.language }}</div>
+                <div class="project-title">{{ project.name }}</div>
+            </div>
+        </a>
+        {% empty %}
+            <p>No projects found. Start by creating a new project!</p>
+        {% endfor %}
+            </div>
+    </div>
+    </main>    
+
+    {% include 'footer.html' %}
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

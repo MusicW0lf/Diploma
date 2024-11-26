@@ -1,0 +1,44 @@
+/* Кнопка для відкриття/закриття навігації */
+.toggle-nav {
+    position: fixed;
+    top: 2.5cm;
+    left: 0;
+    width: 0.5cm;
+    height: calc(100vh - 2.5cm);
+    background-color: #1e1e1e;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Навігаційна панель */
+#sideNav {
+    width: 200px;
+    height: calc(100vh - 2.5cm);
+    position: fixed;
+    top: 2.5cm;
+    left: 0.5cm;
+    background-color: #393939;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    padding: 20px 0;
+    border-right: 2px;
+    border-color: #fff;
+}
+
+#sideNav.active-nav {
+    transform: translateX(0);
+}
+
+/* Секції навігації */
+.nav-cell {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.nav-cell:hover {
+    background-color: #cfd8dc;
+}

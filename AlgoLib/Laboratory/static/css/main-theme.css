@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+    color: white; /* White text */
+    background-color: #1e1e1e; /* Dark background */
+}
+
+/* Code block styles */
+.code-container {
+    background-color: #000000; /* Black background for code blocks */
+    color: white; /* White text */
+    padding: 20px;
+    border-radius: 5px;
+    position: relative; /* For placing the copy button */
+    overflow: auto;
+}
+
+/* Copy button style */
+.copy-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border: 2px;
+    border: #fff;
+    background-color: #158e5d;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+.copy-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+    margin-left: 200px; /* Space for navigation */
+}
+
+/* Основний контент */
+#mainContent {
+    margin-left: 0.5cm;
+    transition: margin-left 0.3s;
+}
+
+#mainContent.active-content {
+    margin-left: 6cm;
+}
+
+/* Section styling */
+section {
+    margin-bottom: 40px;
+}
+
+section h3 {
+    font-size: 24px;
+    color: #158e5d;
+}
+
+section p {
+    font-size: 16px;
+}
+
+
+
+
+
+/* Основні стилі для контейнера з питаннями (quiz) */
+.question-container {
+    background-color: #393939;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+.question-container h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.question-container p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.question-container input[type="radio"] {
+    margin-right: 10px;
+}
+
+.question-container label {
+    font-size: 1rem;
+}
+
+.question-container button {
+    background-color: #007bff;
+    transition: 0.5s;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.question-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Повідомлення про результат */
+#q1Answer, #q2Answer, #q3Answer, #q4Answer {
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: bold;
+}

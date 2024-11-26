@@ -1,0 +1,124 @@
+main {
+    padding: 20px;
+}
+
+.content-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    width: 100%;
+}
+
+.text-content {
+    text-align: center;
+    color: #ffffff;
+}
+
+.text-content h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.text-content p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.algorithms-section {
+    width: 92.5%;
+    padding: 2.5%;
+}
+
+.algorithm-card {
+    display: flex;
+    flex-direction: column;  /* Вертикальне вирівнювання всіх елементів */
+    align-items: center;     /* Вирівнюємо по центру по горизонталі */
+    justify-content: flex-start; /* Вирівнюємо по верхньому краю */
+    height: auto;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    transition: 0.5s;
+}
+
+.algorithm-content {
+    display: flex;
+    flex-direction: row;  /* Вирівнюємо тему та опис по горизонталі */
+    align-items: center;  /* Вирівнюємо по вертикалі */
+    justify-content: flex-start; /* Тема і опис вирівняні в один рядок */
+    gap: 10px;  /* Відстань між заголовком і текстом */
+}
+
+.view-more-btn {
+    padding: 10px 20px;
+    background-color: transparent;
+    border-color: #393939;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 150px;
+}
+
+.algorithm-card:hover {
+    transform: scale(1.02); /* збільшуємо на 5% при наведенні */
+}
+
+
+.card1, .card3, .card5 {
+    background: linear-gradient(135deg, #A8E6CF, #F5E6CC);
+}
+
+.card2, .card4 {
+    background: linear-gradient(315deg, #A8E6CF, #F5E6CC);
+}
+
+.algorithm-card h2 {
+    margin: 0;
+    font-size: 1.8em;
+    flex: 1;
+}
+
+.algorithm-card p {
+    margin: 50px;
+    font-size: 1em;
+    flex: 2;
+    text-align: center;
+}
+
+
+
+
+.laboratory-section {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    color: #ffffff;
+}
+
+.laboratory-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.laboratory-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    height: 450px;
+    width: 700px;
+    margin: 0 auto;
+    background-color: #F5F5F5;
+    border: 2px dashed #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1e1e1e;
+    font-size: 1.5em;
+}
