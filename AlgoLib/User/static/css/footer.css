@@ -63,6 +63,9 @@ footer {
     margin-bottom: 20px;
     max-width: 800px;
 }
+.hover-underline:hover {
+    text-decoration: underline;
+}
 
 .scroll-top {
     background: none;

@@ -4,10 +4,10 @@
         color: #fff; /* Keep the text color as it is without change */
     }
 
-    a:hover {
-        text-decoration: underline; /* Prevent underline on hover */
-        color: #fff; /* Prevent color change on hover */
-    }
+    /* a:hover {
+        text-decoration: underline; 
+        color: #fff;
+    } */
 </style>
 <footer>
     <div class="footer-container">
@@ -29,7 +29,7 @@
 
         <div class="footer-text">
             <p>AlgoLibrary is optimized for learning and developing programming skills. Examples may be simplified for better comprehension and learning. Guides, references, and examples are regularly reviewed to avoid errors, but we cannot guarantee the complete accuracy of all information. By using AlgoLibrary, you agree that you have read and accepted our terms of use, cookie policy, and privacy policy.</p>
-            <p><a href="{% url 'user_tos' %}">Copyright 2024 by AlgoLibrary.</a> All rights reserved. AlgoLibrary operates on its own technologies.</p>
+            <p><a class="hover-underline" href="{% url 'user_tos' %}">Copyright 2024 by AlgoLibrary.</a> All rights reserved. AlgoLibrary operates on its own technologies.</p>
         </div>
         
         <button class="scroll-top">&#9650;</button>
