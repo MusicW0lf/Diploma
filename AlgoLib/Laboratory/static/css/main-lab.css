@@ -175,3 +175,88 @@
 .project-card:nth-child(8) .project-lang { background-color: #34495e; } /* Swift */
 .project-card:nth-child(9) .project-lang { background-color: #9b59b6; } /* Kotlin */
 .project-card:nth-child(10) .project-lang { background-color: #1abc9c; } /* C# */
+
+
+
+
+
+
+/* Основний стиль модального вікна */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    backdrop-filter: blur(8px);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content {
+    background: #393939;
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #f1f1f1;
+}
+
+.modal-content input {
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background: #2e2e2e;
+    color: #fff;
+    outline: none;
+}
+
+.modal-content input::placeholder {
+    color: #a0a0a0;
+}
+
+.modal-content button {
+    padding: 12px 25px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-content button:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+.modal-content button:active {
+    transform: scale(0.98);
+}
+
+.modal-content button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+}

@@ -22,6 +22,20 @@
 <body>
     {% include 'header.html' %}
     
+
+
+    <!-- Modal for project creation -->
+    <div id="create-project-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Create a New Project</h2>
+            <input type="text" id="project-name-input" placeholder="Enter project name" required>
+            <button id="confirm-create-btn" class="btn btn-success">Create</button>
+        </div>
+    </div>
+    
+
+
+
     <main class="project-main">
         <div class="header">
             <h1>Projects</h1>
@@ -67,5 +81,57 @@
 
     {% include 'footer.html' %}
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+     
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modal = document.getElementById("create-project-modal");
+            const confirmButton = document.getElementById("confirm-create-btn");
+            const dropdownItems = document.querySelectorAll(".dropdown-item");
+    
+            // Функція для відкриття модального вікна
+            function openModal() {
+                modal.classList.add("visible");
+                document.body.style.overflow = "hidden"; // Забороняємо прокрутку
+            }
+    
+            // Функція для закриття модального вікна
+            function closeModal() {
+                modal.classList.remove("visible");
+                document.body.style.overflow = ""; // Відновлюємо прокрутку
+            }
+    
+            // Показувати модальне вікно при натисканні на "Python"
+            dropdownItems.forEach(item => {
+                if (item.textContent.trim() === "Python") {
+                    item.addEventListener("click", (e) => {
+                        e.preventDefault(); // Забороняємо перенаправлення
+                        openModal();
+                    });
+                }
+            });
+    
+            // Закривати модальне вікно при натисканні поза його межами
+            modal.addEventListener("click", (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+    
+            // Обробник для кнопки "Create"
+            confirmButton.addEventListener("click", () => {
+                const projectName = document.getElementById("project-name-input").value.trim();
+                if (projectName) {
+                    console.log(`Project Created: ${projectName}`);
+                    closeModal(); // Закриваємо модальне вікно
+                } else {
+                    alert("Please enter a project name!");
+                }
+            });
+        });
+    </script>
 </body>
 </html>
