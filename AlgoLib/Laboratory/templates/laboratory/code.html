@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/main-code.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main-lab.css' %}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/themes/prism-okaidia.min.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="{% static 'image/favicon.ico' %}">
@@ -18,10 +19,33 @@
 <body>
     <!-- Header -->
     {% include 'header.html' %}
-
     <!-- Main Content -->
     <main>
+              
+        <!-- Модальне вікно -->
+        <div id="rename-project-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Rename the Project</h2>
+                <input type="text" id="project-name-input" placeholder="Enter new name" required>
+                <button id="confirm-rename-btn" class="btn btn-success">Rename</button>
+            </div>
+        </div>
+
+
         <div class="main-container">
+            <div class="top-bar">
+                <!-- Контейнер для текстового поля -->
+                <div class="project-action">
+                    <!-- Текстовий блок виглядає як textarea -->
+                    <span class="project-textarea" onclick="openModal()">Bruh</span>
+                </div>
+        
+                <!-- Контейнер для кнопки "Delete" -->
+                <div class="project-delete">
+                    <button class="delete-btn" onclick="deleteProject()">Delete</button>
+                </div>
+            </div>
+            
             <form id="code-form" class="code-form">
                 <label for="code">Write your Python code below:</label>
                 <textarea id="code" rows="12" class="code-editor" 
@@ -101,6 +125,39 @@
             // Використання Prism.js для підсвітки коду
             Prism.highlightElement(preview);
         }
+
+
+
+
+
+
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const modal = document.getElementById("rename-project-modal");
+        
+            // Відкриття модального вікна
+            window.openModal = function () {
+                modal.classList.add("visible");
+                document.body.style.overflow = "hidden"; // Забороняємо прокрутку
+            };
+        
+            // Закриття модального вікна
+            window.closeModal = function () {
+                modal.classList.remove("visible");
+                document.body.style.overflow = ""; // Відновлюємо прокрутку
+            };
+        
+            // Закривати модальне вікно при натисканні поза його межами
+            modal.addEventListener("click", (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+        });
+        
+        
     </script>
 </body>
 </html>
