@@ -122,7 +122,7 @@ def laboratory(request, project_id=None):
         try:
             project = Project.objects.get(pk=project_id)
             if request.user != project.author:
-                return redirect('user_login')
+                return redirect('laboratory_main')
             
             if request.method == 'POST':
                 project.code = request.POST.get('code')
