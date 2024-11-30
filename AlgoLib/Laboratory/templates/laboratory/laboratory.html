@@ -49,7 +49,7 @@
                 <div class="create-project-dropdown">
                     <button class="create-project">+ Create a project</button>
                     <div class="dropdown-menu">
-                        <a href="{% url 'create-project' language='Python' %}" class="dropdown-item">Python</a>
+                        <a href="{% url 'create-project' %}" class="dropdown-item">Python</a>
                         <a href="#" class="dropdown-item">Java</a>
                         <a href="#" class="dropdown-item">JavaScript</a>
                         <a href="#" class="dropdown-item">Ruby</a>
@@ -91,47 +91,77 @@
             const modal = document.getElementById("create-project-modal");
             const confirmButton = document.getElementById("confirm-create-btn");
             const dropdownItems = document.querySelectorAll(".dropdown-item");
-    
-            // Функція для відкриття модального вікна
+            let selectedLanguage = ""; // Variable to store the selected language
+        
+            // Function to open the modal
             function openModal() {
                 modal.classList.add("visible");
-                document.body.style.overflow = "hidden"; // Забороняємо прокрутку
+                document.body.style.overflow = "hidden"; // Disable scrolling
             }
-    
-            // Функція для закриття модального вікна
+        
+            // Function to close the modal
             function closeModal() {
                 modal.classList.remove("visible");
-                document.body.style.overflow = ""; // Відновлюємо прокрутку
+                document.body.style.overflow = ""; // Re-enable scrolling
             }
-    
-            // Показувати модальне вікно при натисканні на "Python"
+        
             dropdownItems.forEach(item => {
-                if (item.textContent.trim() === "Python") {
-                    item.addEventListener("click", (e) => {
-                        e.preventDefault(); // Забороняємо перенаправлення
-                        openModal();
-                    });
-                }
+                item.addEventListener("click", (e) => {
+                    e.preventDefault(); // Prevent default behavior (e.g., redirect)
+                    selectedLanguage = item.textContent; // Set selected language
+                    openModal(); // Open the modal
+                });
             });
-    
-            // Закривати модальне вікно при натисканні поза його межами
+        
+            // Close the modal when clicking outside it
             modal.addEventListener("click", (e) => {
                 if (e.target === modal) {
                     closeModal();
                 }
             });
-    
-            // Обробник для кнопки "Create"
+        
+            // Handler for the "Create" button
             confirmButton.addEventListener("click", () => {
                 const projectName = document.getElementById("project-name-input").value.trim();
                 if (projectName) {
-                    console.log(`Project Created: ${projectName}`);
-                    closeModal(); // Закриваємо модальне вікно
+                    // Prepare JSON data
+                    const data = {
+                        language: selectedLanguage,
+                        project_name: projectName
+                    };
+        
+                    // Send data to the server
+                    fetch("{% url 'create-project' %}", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "X-CSRFToken": "{{ csrf_token }}"
+                        },
+                        body: JSON.stringify(data)
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            return response.json();
+                        } else {
+                            throw new Error("Failed to create project");
+                        }
+                    })
+                    .then(data => {
+                        console.log("Project created successfully:", data);
+                        window.location.href = `/laboratory/${data.project_id}/`; // Redirect to the project page
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                        alert("An error occurred while creating the project.");
+                    });
+        
+                    closeModal(); // Close the modal
                 } else {
                     alert("Please enter a project name!");
                 }
             });
         });
+        
     </script>
 </body>
 </html>

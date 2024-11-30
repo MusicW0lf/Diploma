@@ -78,21 +78,42 @@ def generate_random_colors():
     colors = ['#'+ ''.join([random.choice('0123456789ABCDEF') for _ in range(6)]) for _ in range(2)]
     return colors
 
+import json
+from django.http import JsonResponse
+
 @login_required
-def create_project(request, language):
-    project_name = "ADD NAME POPUP PLS"
-    project_code = "#write your project code here!"
+def create_project(request):
+    if request.method == "POST":
+        try:
+            # Parse the incoming JSON data
+            data = json.loads(request.body)
+            project_name = data.get("project_name")
+            language = data.get("language")
 
-    project = Project.objects.create(
-        name=project_name,
-        language=language,
-        code=project_code,
-        author=request.user,
-        random_colors=generate_random_colors()
-    )
-    print("we created project!")
+            if not project_name or not language:
+                return JsonResponse({"error": "Project name and language are required."}, status=400)
 
-    return redirect('laboratory', project_id=project.project_id)
+            project_code = "#write your project code here!"
+
+            # Create the project
+            project = Project.objects.create(
+                name=project_name,
+                language=language,
+                code=project_code,
+                author=request.user,
+                random_colors=generate_random_colors()
+            )
+            print("we created project!")
+
+            # Return the project ID as part of the response
+            return JsonResponse({"project_id": project.project_id})
+
+        except json.JSONDecodeError:
+            return JsonResponse({"error": "Invalid JSON data."}, status=400)
+
+    # If the request method is not POST, return a 405 Method Not Allowed error
+    return JsonResponse({"error": "Method not allowed."}, status=405)
+
 
 def laboratory(request, project_id=None):
     if not request.user.is_authenticated:

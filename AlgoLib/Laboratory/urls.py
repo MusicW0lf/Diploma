@@ -6,6 +6,6 @@ from . import views
 urlpatterns = [
     path('', views.laboratory, name='laboratory_main'),
     path('execute/', execute_code, name='execute_code'),
-    path('create-project/<str:language>/', views.create_project, name='create-project'),
+    path('create-project/', views.create_project, name='create-project'),
     path('<int:project_id>/', views.laboratory, name='laboratory'),
 ]
