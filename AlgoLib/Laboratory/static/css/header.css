@@ -54,6 +54,7 @@ header {
 .search-container .form-control {
     border: none; /* Remove default border */
     outline: none; /* Remove outline */
+    color:#fff;
     background: transparent; /* Transparent background */
     border-radius: 25px; /* Match the container's border radius */
     padding: 10px; /* Padding for the input field */

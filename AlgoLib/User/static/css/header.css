@@ -47,6 +47,7 @@ header {
     align-items: center; /* Center items vertically */
     border-radius: 25px; /* Rounded corners */
     background-color: #393939; /* Light background color */
+    color:#fff;
     padding: 5px; /* Padding for spacing */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
 }
