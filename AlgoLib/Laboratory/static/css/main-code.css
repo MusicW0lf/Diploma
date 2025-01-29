@@ -1,11 +1,9 @@
-/* Стилі для body */
 body {
     color: #fff;
-    padding-top: 1cm; /* Враховуємо висоту header */
+    padding-top: 1cm;
     margin: 0;
 }
 
-/* Головний контейнер */
 main {
     width: 100%;
     display: flex;
@@ -14,18 +12,16 @@ main {
     position: relative;
 }
 
-/* Обгортка для головного вмісту */
 .main-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Проміжки між секціями */
+    gap: 20px;
     padding: 20px;
 }
 
-/* Форма для коду */
 .code-form {
     width: 100%;
     display: flex;
@@ -33,9 +29,8 @@ main {
     gap: 10px;
 }
 
-/* Текстова область для вводу коду */
 .code-form textarea {
-    height: 300px; /* Збільшено висоту */
+    height: 300px;
     padding: 15px;
     border-radius: 5px;
     border: 1px solid #555;
@@ -45,9 +40,8 @@ main {
     resize: none;
 }
 
-/* Кнопка запуску */
 .run-button {
-    align-self: flex-start; /* Вирівнювання по лівому краю */
+    align-self: flex-start;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -61,7 +55,6 @@ main {
     background-color: #45a049;
 }
 
-/* Секції для виводу */
 .output-section, .error-section {
     width: 100%;
     background-color: #393939;
@@ -71,16 +64,12 @@ main {
 }
 
 .output-section pre, .error-section pre {
-    white-space: pre-wrap; /* Переноси слів */
+    white-space: pre-wrap;
     word-wrap: break-word;
     color: #ddd;
     font-family: 'Courier New', Courier, monospace;
 }
 
-
-
-
-/* Редактор коду */
 .code-editor {
     min-height: 300px;
     padding: 15px;
@@ -93,43 +82,34 @@ main {
     outline: none;
 }
 
-
-
-
-
-/* Основний стиль для верхньої панелі */
 .top-bar {
     display: flex;
     color: #fff;
     position: relative;
 }
 
-/* Контейнер для текстового поля */
 .project-action {
     width: 100%;
 }
 
-/* Стиль для текстового поля */
 .project-textarea {
-    width: 100%; /* Розтягується на доступну ширину */
-    max-width: calc(100% - 150px); /* Залишає місце для кнопки */
+    width: 100%;
+    max-width: calc(100% - 150px);
     padding: 8px;
     border: 1px solid #555;
     border-radius: 5px;
     background-color: #1e1e1e;
     color: #fff;
     font-family: 'Courier New', Courier, monospace;
-    resize: none; /* Забороняє зміну розміру */
+    resize: none;
     outline: none;
     font-size: 1rem;
 }
 
-/* Контейнер для кнопки */
 .project-delete {
-    margin-left: 20px; /* Проміжок між текстовим полем і кнопкою */
+    margin-left: 20px;
 }
 
-/* Стиль для кнопки "Delete" */
 .delete-btn {
     background-color: #dc3545;
     color: white;

@@ -1,38 +1,30 @@
-
-/* Стиль для назви сайту */
 .site-title {
-    color: white; /* Колір тексту */
-    font-size: 1.5rem; /* Розмір шрифту */
-    margin-right: auto; /* Вирівнюємо вліво */
-    padding-left: 20px; /* Відступ зліва */
+    color: white;
+    font-size: 1.5rem;
+    margin-right: auto;
+    padding-left: 20px;
 }
 
-/* Стиль для основного контенту */
 main {
-    transition: margin-left 0.3s; /* Додаємо перехід для зміни margin */
+    transition: margin-left 0.3s;
     padding: 20px;
-    margin-left: 0.5cm; /* Відступ для кнопки-стрічки */
+    margin-left: 0.5cm;
 }
 
-/* Стиль для контейнерів */
 .content-container {
     padding: 20px;
-    border-bottom: 1px solid #ccc; /* Лінія між контейнерами */
+    border-bottom: 1px solid #ccc;
 }
 
-
-
-/* Стиль для контейнера з кодом */
 .code-container {
-    background-color: #3a3b3c; /* Сірий фон */
-    color: white; /* Білий текст */
-    padding: 0px 5px 0px 5px; /* Внутрішній відступ */
-    border-radius: 5px; /* Заокруглені краї */
-    overflow: auto; /* Переповнення */
+    background-color: #3a3b3c;
+    color: white;
+    padding: 0px 5px 0px 5px;
+    border-radius: 5px;
+    overflow: auto;
 }
 
-/* Стиль для тексту коду */
 .code {
     margin: 0;
-    font-family: monospace; /* Шрифт моноширинний */
+    font-family: monospace;
 }

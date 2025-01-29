@@ -1,31 +1,27 @@
-/* Стиль для кнопки */
 .back-button {
     position: fixed;
     width: 50px;
     height: 50px;
-    top: 20px; /* Відступ від верхнього краю */
-    left: 20px; /* Відступ від лівого краю */
-    background-color: #18a76d; /* Колір кнопки */
-    color: white; /* Колір іконки */
-    border-radius: 50%; /* Кругла форма кнопки */
+    top: 20px;
+    left: 20px;
+    background-color: #18a76d;
+    color: white;
+    border-radius: 50%;
     padding: 10px;
     font-size: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тінь для кнопки */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
     text-align: center;
-    text-decoration: none; /* Забираємо стандартне підкреслення */
+    text-decoration: none;
 }
 
 .back-button:hover {
-    background-color: #158e5d; /* Темніший колір при наведенні */
+    background-color: #158e5d;
 }
 
 .back-button i {
     margin: 0;
 }
-
-
-
 
 * {
     box-sizing: border-box;
@@ -38,10 +34,6 @@ body {
     background-color: #1a1a1a;
     color: #fff;
 }
-
-/* .container {
-    max-width: 100%;
-} */
 
 .brand {
     color: #18a76d;
