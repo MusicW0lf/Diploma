@@ -1,4 +1,3 @@
-/* Основні стилі для контейнера */
 .project-main {
     padding: 20px;
     max-width: 1200px;
@@ -6,7 +5,6 @@
     margin: 0 auto;
 }
 
-/* Заголовок */
 .header {
     display: flex;
     justify-content: space-between;
@@ -20,7 +18,6 @@
     font-weight: bold;
 }
 
-/* Панель управління */
 .controls {
     display: flex;
     align-items: center;
@@ -68,14 +65,13 @@
     background-color: #218838;
 }
 
-/* Випадаюче меню для створення проекту */
 .create-project-dropdown {
     position: relative;
     display: inline-block;
 }
 
 .dropdown-menu {
-    display: block; /* Змінено на block для плавного переходу */
+    display: block;
     opacity: 0;
     visibility: hidden;
     position: absolute;
@@ -104,14 +100,12 @@
     color: white;
 }
 
-/* Активація меню при наведенні */
 .create-project-dropdown:hover .dropdown-menu,
 .create-project-dropdown:focus-within .dropdown-menu {
     opacity: 1;
     visibility: visible;
 }
 
-/* Сітка проектів */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -120,7 +114,6 @@
     padding: 0;
 }
 
-/* Карточки проектів */
 .project-card {
     background-color: #f8f9fa;
     border-radius: 8px;
@@ -134,7 +127,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Зображення проекту */
 .project-image {
     width: 100%;
     height: 200px;
@@ -142,7 +134,6 @@
     position: relative;
 }
 
-/* Мітка мови проекту */
 .project-lang {
     position: absolute;
     top: 10px;
@@ -155,7 +146,6 @@
     font-weight: bold;
 }
 
-/* Заголовок проекту */
 .project-title {
     font-size: 1.2rem;
     font-weight: 600;
@@ -164,7 +154,6 @@
     text-align: center;
 }
 
-/* Індивідуальні кольори міток для мов */
 .project-card:nth-child(1) .project-lang { background-color: #007bff; } /* Python */
 .project-card:nth-child(2) .project-lang { background-color: #f39c12; } /* Java */
 .project-card:nth-child(3) .project-lang { background-color: #e74c3c; } /* JavaScript */
@@ -176,12 +165,6 @@
 .project-card:nth-child(9) .project-lang { background-color: #9b59b6; } /* Kotlin */
 .project-card:nth-child(10) .project-lang { background-color: #1abc9c; } /* C# */
 
-
-
-
-
-
-/* Основний стиль модального вікна */
 .modal {
     position: fixed;
     top: 0;

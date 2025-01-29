@@ -1,4 +1,3 @@
-/* Кнопка для відкриття/закриття навігації */
 .toggle-nav {
     position: fixed;
     top: 2.5cm;
@@ -10,7 +9,6 @@
     z-index: 1001;
 }
 
-/* Навігаційна панель */
 #sideNav {
     width: 200px;
     height: calc(100vh - 2.5cm);
@@ -30,7 +28,6 @@
     transform: translateX(0);
 }
 
-/* Секції навігації */
 .nav-cell {
     display: block;
     padding: 10px 15px;

@@ -32,9 +32,9 @@ main {
 
 .algorithm-card {
     display: flex;
-    flex-direction: column;  /* Вертикальне вирівнювання всіх елементів */
-    align-items: center;     /* Вирівнюємо по центру по горизонталі */
-    justify-content: flex-start; /* Вирівнюємо по верхньому краю */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     height: auto;
     width: 100%;
     margin-bottom: 20px;
@@ -48,10 +48,10 @@ main {
 
 .algorithm-content {
     display: flex;
-    flex-direction: row;  /* Вирівнюємо тему та опис по горизонталі */
-    align-items: center;  /* Вирівнюємо по вертикалі */
-    justify-content: flex-start; /* Тема і опис вирівняні в один рядок */
-    gap: 10px;  /* Відстань між заголовком і текстом */
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
 }
 
 .view-more-btn {
@@ -65,9 +65,8 @@ main {
 }
 
 .algorithm-card:hover {
-    transform: scale(1.02); /* збільшуємо на 5% при наведенні */
+    transform: scale(1.02);
 }
-
 
 .card1, .card3, .card5 {
     background: linear-gradient(135deg, #A8E6CF, #F5E6CC);
@@ -89,9 +88,6 @@ main {
     flex: 2;
     text-align: center;
 }
-
-
-
 
 .laboratory-section {
     width: 100%;

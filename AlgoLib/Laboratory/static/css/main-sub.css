@@ -2,11 +2,10 @@ main {
     margin: 0;
 }
 
-/* Загальний стиль секції підписки */
 .subscription-section {
     text-align: center;
     padding: 40px;
-    color: #ffffff; /* Білий текст */
+    color: #ffffff;
 }
 
 .subscription-section h1 {
@@ -19,62 +18,49 @@ main {
     margin-bottom: 30px;
 }
 
-
-
-
-
-/* Загальний стиль секції підписки */
 .subscription-cards {
     display: flex;
     justify-content: center;
-    align-items: center; /* Центрування по висоті */
+    align-items: center;
     gap: 20px;
 }
 
-/* Стиль карток */
 .subscription-card {
-    background-color: #1e1e1e; /* Темний фон картки */
+    background-color: #1e1e1e;
     border-radius: 8px;
     padding: 20px;
     width: 300px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
-    color: #ffffff; /* Білий текст для карток */
-    border: 2px solid #005b41; /* Обвідка з кольору #393939 */
+    color: #ffffff;
+    border: 2px solid #005b41;
     transition: 0.5s;
 }
 
-/* Зробити середню картку вищою */
 .subscription-card--tall {
-    height: 420px; /* Задайте висоту, яка вам підходить */
+    height: 420px;
 }
 
 .subscription-card:hover {
-    transform: scale(1.02); /* збільшуємо на 5% при наведенні */
+    transform: scale(1.02);
 }
 
-
-
-/* Стиль заголовка плану */
 .subscription-card h2 {
     font-size: 24px;
-    color: #005b41; /* Зелений колір для заголовка */
+    color: #005b41;
     margin-bottom: 5px;
 }
 
-/* Стиль ціни */
 .subscription-card .price {
     font-size: 22px;
     margin: 10px 0;
 }
 
-/* Стиль опису */
 .subscription-card .description {
     font-size: 14px;
     margin: 5px 0 15px;
 }
 
-/* Стиль списку */
 .subscription-card ul {
     list-style-type: none;
     padding: 0;
@@ -87,99 +73,81 @@ main {
     padding-left: 20px;
 }
 
-/* Стиль для галочки */
 .subscription-card ul li::before {
     content: "✔";
-    color: #005b41; /* Зелений колір для галочки */
+    color: #005b41;
     position: absolute;
     left: 0;
 }
 
-/* Стиль для останнього пункту з хрестиком у картці Free */
 .subscription-card:first-child ul li:last-child::before {
-    content: "✘"; /* Хрестик для останнього пункту */
-    color: #ff4d4d; /* Червоний для пункту "No support" */
+    content: "✘";
+    color: #ff4d4d;
 }
 
-/* Для інших карток останній пункт без хрестика */
 .subscription-card:not(:first-child) ul li:last-child::before {
-    content: ""; /* Без значка для останнього пункту */
+    content: "";
 }
 
-
-
-/* Стиль для кнопки Buy */
 .buy-button {
-    background-color: #005b41; /* Зелений колір фону */
-    color: white; /* Білий текст */
-    border: none; /* Без обводки */
-    padding: 10px 20px; /* Відступи */
-    font-size: 16px; /* Розмір шрифта */
-    width: 100%; /* Кнопка на всю ширину картки */
-    border-radius: 8px; /* Заокруглені кути */
-    cursor: pointer; /* Курсор pointer на наведенні */
-    transition: background-color 0.3s; /* Анімація для ховера */
+    background-color: #005b41;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* Ховер для кнопки Buy */
 .buy-button:hover {
-    background-color: #004b33; /* Темніший зелений на ховері */
+    background-color: #004b33;
 }
 
-
-
-
-
-/* Style for the FAQ section */
 .faq-section {
-    padding: 40px; /* Padding */
-    color: #000000; /* Black text */
-    margin-top: 40px; /* Margin from the previous section */
+    padding: 40px;
+    color: #000000;
+    margin-top: 40px;
 }
 
-/* Стиль для секції FAQ */
 .faq-item {
-    margin-bottom: 10px; /* Простір між елементами */
-    border-radius: 12px; /* Заокруглені кути */
+    margin-bottom: 10px;
+    border-radius: 12px;
     background-color: #ffffff;
-    border: 1px solid #393939; /* Колір обводки */
-    overflow: hidden; /* Забезпечує правильне заокруглення кутів */
+    border: 1px solid #393939;
+    overflow: hidden;
 }
 
-/* Стиль для кнопки питання */
 .faq-question {
-    background-color: #f0f0f0; /* Світлий фон для кнопки */
-    color: #000; /* Чорний текст */
-    border: none; /* Без обводки */
-    font-size: 16px; /* Розмір шрифта */
-    padding: 15px; /* Відступи всередині кнопки */
-    width: 100%; /* Кнопка займає всю ширину */
-    cursor: pointer; /* Курсор на pointer */
-    text-align: left; /* Ліве вирівнювання тексту */
-    transition: background-color 0.3s ease; /* Анімація при зміні фону */
+    background-color: #f0f0f0;
+    color: #000;
+    border: none;
+    font-size: 16px;
+    padding: 15px;
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s ease;
 }
 
-/* Ховер ефект для кнопки */
 .faq-question:hover {
-    background-color: #005b41; /* Трохи темніший фон на ховері */
-    color: #fff; /* Білий текст */
+    background-color: #005b41;
+    color: #fff;
 }
 
-/* Стиль для активного питання (після натискання) */
 .faq-question.active {
-    background-color: #005b41; /* Той самий темний фон, що і для ховера */
-    color: #fff; /* Білий текст */
+    background-color: #005b41;
+    color: #fff;
 }
 
-/* Стиль для відповіді */
 .faq-answer {
-    display: none; /* Приховано за замовчуванням */
-    padding: 10px; /* Відступи всередині відповіді */
-    background-color: #f9f9f9; /* Світло-сірий фон */
-    font-size: 14px; /* Розмір шрифта */
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    font-size: 14px;
 }
 
-/* Стиль для відкритих відповідей */
 .faq-answer.show {
-    display: block; /* Відображаємо відповідь */
+    display: block;
 }

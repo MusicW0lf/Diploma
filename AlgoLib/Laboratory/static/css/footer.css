@@ -5,15 +5,15 @@ footer {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    position: relative; /* Залишається відносно body */
+    position: relative;
     z-index: 2;
     border-top: 2px solid #fff;
-    transition: margin-left 0.3s, width 0.3s; /* Додаємо перехід для ширини */
+    transition: margin-left 0.3s, width 0.3s;
 }
 
 .active-footer {
-    margin-left: 5cm; /* Зміщує футер */
-    width: calc(100% - 5cm); /* Зменшуємо ширину футера */
+    margin-left: 5cm;
+    width: calc(100% - 5cm);
 }
 
 
