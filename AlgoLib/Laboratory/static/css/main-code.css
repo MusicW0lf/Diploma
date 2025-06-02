@@ -92,25 +92,12 @@ main {
     width: 100%;
 }
 
-.project-textarea {
-    width: 100%;
-    max-width: calc(100% - 150px);
-    padding: 8px;
-    border: 1px solid #555;
-    border-radius: 5px;
-    background-color: #1e1e1e;
-    color: #fff;
-    font-family: 'Courier New', Courier, monospace;
-    resize: none;
-    outline: none;
-    font-size: 1rem;
-}
-
 .project-delete {
     margin-left: 20px;
 }
 
-.delete-btn {
+.delete-btn, .rename-btn {
+    
     background-color: #dc3545;
     color: white;
     border: none;
@@ -121,6 +108,13 @@ main {
     transition: background-color 0.3s;
 }
 
+.rename-btn {
+    background-color: #7d7a7a;
+}
+
+.rename-btn:hover {
+    background-color: #3f3f3f;
+}
 .delete-btn:hover {
     background-color: #c82333;
 }

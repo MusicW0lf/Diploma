@@ -94,7 +94,7 @@ def create_project(request):
             if not project_name or not language:
                 return JsonResponse({"error": "Project name and language are required."}, status=400)
 
-            project_code = "#write your project code here!"
+            project_code = ""
 
             # Create the project
             project = Project.objects.create(

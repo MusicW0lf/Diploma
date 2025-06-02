@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'AlgoLib.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': 'django_db',
         'USER': 'postgres',
         'PASSWORD': 'postgres', 
         'HOST': 'localhost',
