@@ -6,6 +6,9 @@ import json, random
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Project
+from django.contrib import messages
+from django.views.decorators.http import require_POST
+
 
 @csrf_exempt
 def execute_code(request):
@@ -78,8 +81,6 @@ def generate_random_colors():
     colors = ['#'+ ''.join([random.choice('0123456789ABCDEF') for _ in range(6)]) for _ in range(2)]
     return colors
 
-import json
-from django.http import JsonResponse
 
 @login_required
 def create_project(request):
@@ -103,7 +104,6 @@ def create_project(request):
                 author=request.user,
                 random_colors=generate_random_colors()
             )
-            print("we created project!")
 
             # Return the project ID as part of the response
             return JsonResponse({"project_id": project.project_id})
@@ -135,3 +135,18 @@ def laboratory(request, project_id=None):
     else:
         user_projects = Project.objects.filter(author=request.user)
         return render(request, 'laboratory/laboratory.html', {'projects': user_projects})
+
+
+@login_required
+def delete_project(request, project_id):
+    if request.method != 'DELETE':
+        return JsonResponse({'error': 'Only DELETE method allowed'}, status=405)
+
+    try:
+        project = get_object_or_404(Project, project_id=project_id, author=request.user)
+        project.delete()
+        return JsonResponse({'success': True, 'message': 'Project deleted successfully.'})
+        
+    
+    except Exception as e:
+        return JsonResponse({'success': False, 'error': str(e)}, status=400)

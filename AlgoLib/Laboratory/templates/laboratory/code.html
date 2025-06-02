@@ -42,8 +42,9 @@
         
                 <!-- Контейнер для кнопки "Delete" -->
                 <div class="project-delete">
-                    <button class="delete-btn" onclick="deleteProject()">Delete</button>
+                    <button class="delete-btn" onclick="deleteProject({{project.project_id}})">Delete</button>
                 </div>
+                
             </div>
             
             <form id="code-form" class="code-form">
@@ -80,6 +81,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/plugins/autoloader/prism-autoloader.min.js"></script>
     <script src="https://kit.fontawesome.com/985061e91f.js" crossorigin="anonymous"></script>
     <script>
+
+
+
+        function deleteProject(projectId) {
+            fetch(`/laboratory/delete/${projectId}/`, {
+                method: 'DELETE',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}',
+                    'Content-Type': 'application/json',
+                },
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Redirect on success
+                    window.location.href = '/laboratory/';
+                } else {
+                    alert('Error: ' + data.error);
+                }
+            })
+            .catch(err => alert('Request failed: ' + err));
+        }
+        
+        
+
+
+
         function executeCode() {
             const code = document.getElementById('code').value;
             const projectId = "{{ project.project_id }}"; // Pass the project ID from the template context

@@ -8,4 +8,5 @@ urlpatterns = [
     path('execute/', execute_code, name='execute_code'),
     path('create-project/', views.create_project, name='create-project'),
     path('<int:project_id>/', views.laboratory, name='laboratory'),
+    path('delete/<int:project_id>/', views.delete_project, name='delete_project')
 ]
