@@ -150,3 +150,17 @@ def delete_project(request, project_id):
     
     except Exception as e:
         return JsonResponse({'success': False, 'error': str(e)}, status=400)
+
+@login_required
+def rename_project(request,project_id):
+    if request.method != "PATCH":
+        return JsonResponse({'error': 'Only PATCH method allowed'}, status=405)
+    
+    try:
+        project = get_object_or_404(Project, project_id=project_id, author = request.user)
+        data = json.loads(request.body)
+        project.name = data.get("new_name")
+        project.save()
+        return render(request, 'laboratory/code.html', {'project': project})
+    except Exception as e:
+        return JsonResponse({'success': False, 'error': str(e)}, status=400)

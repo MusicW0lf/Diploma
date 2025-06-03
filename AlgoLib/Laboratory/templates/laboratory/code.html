@@ -27,7 +27,7 @@
             <div class="modal-content">
                 <h2>Rename the Project</h2>
                 <input type="text" id="project-name-input" placeholder="Enter new name" required>
-                <button id="confirm-rename-btn" class="btn btn-success">Rename</button>
+                <button id="confirm-rename-btn" class="btn btn-success" onclick="renameProject()">Rename</button>
             </div>
         </div>
 
@@ -106,7 +106,39 @@
         
         
 
-
+        function renameProject() {
+            const newName = document.getElementById('project-name-input').value.trim();
+            if (!newName) {
+                alert('Please enter a valid project name.');
+                return;
+            }
+        
+            const projectId = "{{ project.project_id }}";  // Passed from Django template context
+        
+            fetch(`/laboratory/rename/${projectId}/`, {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': '{{ csrf_token }}',
+                },
+                body: JSON.stringify({ new_name: newName }),
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to rename project');
+                }
+                return response.text();  // Since your view returns a rendered HTML page
+            })
+            .then(html => {
+                // Optional: refresh part of the page or the whole page
+                document.open();
+                document.write(html);
+                document.close();
+            })
+            .catch(error => {
+                alert('Error renaming project: ' + error.message);
+            });
+        }
 
         function executeCode() {
             const code = document.getElementById('code').value;
